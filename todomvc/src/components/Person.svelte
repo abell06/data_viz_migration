@@ -15,7 +15,6 @@
 </script>
 
 <main class="humans">
-    <h3 style="margin-top: 10px">Migrants reporting violence</h3>
     {#each data_values as individual}
     <svg width=200 height=200 class="person" viewBox="-100 -100 200 200">
         <g>
