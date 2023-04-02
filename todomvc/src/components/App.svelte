@@ -1,101 +1,86 @@
 <script>
 
-    //import { width, height, numExpandedIndividuals } from '../components/stores.js';
-	//let data = d3.csv('https://raw.githubusercontent.com/tututwo/svelte-tutorial-heatmap/main/src/data/data.csv')
-    import data from '../components/irregularviolence.json';
-    console.log(data);
-    console.log(data.violence_strings);
-    //import {all_violence_strings} from '../components/irregularviolence.json';
-    //let data = [0,1,2,3,4,5,6,7,8,9,10,11, 12, 13, 14, 15, 16, 17];
-    //let rest_of_data = [0,1,2,3,4,5,6,7,8];
-    let rest_of_data = new Array(932);
-    let hovered = -1;
-    let recorded_mouse_position = {
-		x: 0, y: 0
-	};
+    import Person from '../components/Person.svelte';
+    import Dot from '../components/Dot.svelte';
+    import violence_data from '../components/irregularviolence.json';
+    import no_violence_data from '../components/irregular_no_violence.json';
 
+    //Obtain data for gender filter
+    let filtered_data_violence = violence_data.filter(violence_data => (violence_data.mig_ext_sex==1));
+    let opposing_filtered_data_violence = violence_data.filter(violence_data => (violence_data.mig_ext_sex!=1));
+    let filtered_data_no_violence = no_violence_data.filter(no_violence_data => (no_violence_data.mig_ext_sex==1));
+    let opposing_filtered_data_no_violence = no_violence_data.filter(no_violence_data => (no_violence_data.mig_ext_sex!=1));
+    
+    //calculate the percentage of violence for given filter
+    let violence_rate_filter = Object.keys(filtered_data_violence).length/(Object.keys(filtered_data_violence).length + Object.keys(filtered_data_no_violence).length)
+    let s_violence_rate_filter = Number(violence_rate_filter).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+    let violence_rate_opp_filter = Object.keys(opposing_filtered_data_violence).length/(Object.keys(opposing_filtered_data_no_violence).length + Object.keys(opposing_filtered_data_violence).length)
+    let s_violence_rate_opp_filter = Number(violence_rate_opp_filter).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
 
-    let todos = [
-        { id: "0", text: "Learn Svelte", completed: false },
-        { id: "1", text: "Finish Lab", completed: false },
-    ];
+    //Obtain data for motivation filter
+    let filtered_data_violence1 = violence_data.filter(violence_data => (violence_data.mig_ext_motivo/3==1));
+    let opposing_filtered_data_violence1 = violence_data.filter(violence_data => (violence_data.mig_ext_motivo/3!=1));
+    let filtered_data_no_violence1 = no_violence_data.filter(no_violence_data => (no_violence_data.mig_ext_motivo/3==1));
+    let opposing_filtered_data_no_violence1 = no_violence_data.filter(no_violence_data => (no_violence_data.mig_ext_motivo/3!=1));
 
+    const options = [
+		{ filter: 'Sort by gender', v_filter_on: filtered_data_violence},
+		{ filter: 'Sort by motivation to migrate',  v_filter_on: filtered_data_violence1},
+		{ filter: 'Sort by accompanying travelers'},
+	];
 
-      // Adjust scales to dimensions
-    //$: individualRowScale = d3.scaleLinear()
-    //    .domain([0, data.length])
-    //    .range([$width / 100, $width]);
-    //$: data
+	let selected = options[0];
 
-    let colour = 'red';
-	
-	function handleMouseOver(e) {
-		colour = 'green';
-	}
-	function handleMouseOut(e) {
-		colour = 'red';
-	}
 </script>
 
 
 <main>
 
-    <h2 style="margin-top: 5px">The survey asked whether each migrant had experienced any form of violence on their journey. Of the 1249 "irregular" migrants included, 317 reported at least one type of violence experienced. </h2>
 
-    <section class="humans">
-        <h3 style="margin-top: 10px">Migrants reporting violence</h3>
-        {#each data as individual}
-        <svg width=200 height=200 class="person" viewBox="-100 -100 200 200">
-            <g>
-                <circle
-                cx="-0"
-                cy="-45"
-                r="28"
-                fill=	#800000
-                stroke=#800000
-                stroke-width="2"
-                />
-                <line x1="0" y1="-25" x2="0" y2="30" stroke=#800000 stroke-width="10"/>
-                <line x1="0" y1="30" x2="20" y2="65" stroke=#800000 stroke-width="10"/>
-                <line x1="0" y1="30" x2="-20" y2="65" stroke=#800000 stroke-width="10"/>
-                <line x1="-20" y1="5" x2="20" y2="5" stroke=#800000 stroke-width="10"/>
-                <rect x="-100" y="-100" width="200" height="200" fill = "blue" opacity= 0
-                on:mouseover={(event) => { hovered = individual; 
-                    recorded_mouse_position = {
-                                x: event.pageX,
-                                y: event.pageY}}}
-                    on:mouseout={(event) => { hovered = -1; }}/>
+    <h2 style="margin-top: 5px">Reported violence by various migrant characteristics </h2>
 
-            </g>
+    <select bind:value={selected}>
+        {#each options as option}
+            <option value={option}>{option.filter}</option>
+        {/each}
+    </select>
+    {#if selected.filter === 'Sort by gender'}
+	    <p>Violence by gender</p>
+    {:else if selected.filter === 'Sort by motivation to migrate'}
+	    <p>by x</p>
+    {:else if selected.filter === 'Sort by accompanying travelers'}
+	    <p>by y</p>
+    {/if}
 
-          </svg>
-          <div
-          class={hovered === -1 ? "tooltip-hidden": "tooltip-visible"}	
-          style="left: {recorded_mouse_position.x + 20}px; top: {recorded_mouse_position.y + 20}px"
-      >
-          {#if hovered !== -1}
-              Type of violence reported: {hovered.violence_strings} 
-          {/if}
-      </div>
-  
-          {/each}
-    </section>
+    <p>{selected.filter}</p>
 
-    <section class="dots">
-        <h3 style="margin-top: 10px">Migrants not reporting violence</h3>
-        {#each rest_of_data as individual, i}
-        <svg width=100 height=100 class="dot" viewBox="-100 -100 200 200">
-            <circle
-              cx="-0"
-              cy="-45"
-              r="28"
-              fill=	#808080
-              stroke=#808080
-              stroke-width="2"
-            />
-          </svg>
-          {/each}
-    </section>
+    <h3 style="margin-top: 10px">Migrants reporting violence</h3>
+    <div class = "violence_grid">
+        <section class="humans_filter1">
+            <p style = "font-style: italic">Female migrants</p>
+            <p>Rate of reported violence: {s_violence_rate_filter}</p>
+
+            <Person data_person = {selected.v_filter_on}/>
+        </section>
+
+        <section class="humans_filter2">
+            <p style = "font-style: italic">All others</p>
+            <p>Rate of reported violence: {s_violence_rate_opp_filter}</p>
+            <Person data_person = {opposing_filtered_data_violence}/>
+        </section>
+
+
+    </div>
+    <h3 style="margin-top: 10px">Migrants not reporting violence</h3>
+    <div class = "no_violence_grid">
+        <section class="dots_filter1">
+            <Dot data_dot = {filtered_data_no_violence}/>
+        </section>
+
+        <section class="dots_filter2">
+            <Dot data_dot = {opposing_filtered_data_no_violence}/>
+        </section>
+    </div>
 
 </main>
 
@@ -135,6 +120,10 @@
         flex-shrink: 0;
         flex: 0 1 10%;
     } */
+    .humans {
+        display: inline-block;
+        margin-left: 50px;
+    }
 
     .person {
         height: 40px;
@@ -148,15 +137,7 @@
         opacity: 0.5;
         cursor:pointer;
     }
-    .dot {
-        height: 20px;
-        width: 20px;
-        animation-name: floating;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-delay: 100ms;
-    }
+
 
     main {
         text-align: center;
@@ -260,4 +241,50 @@
         50%  { transform: translate(0, 3px); }
         100%   { transform: translate(0, -0px); }   
     }
+    .violence_grid {
+        display: flex;
+        width: 100%;
+        /*   height:250px; */
+
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        }
+
+    .humans_filter1 {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 50%;
+        height: 100vh;
+
+        }
+
+    .humans_filter2 {
+        width: 50%;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        } 
+    .no_violence_grid {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        }
+
+    .dots_filter1 {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 50%;
+        height: 100vh;
+
+        }
+
+    .dots_filter2 {
+        width: 50%;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        } 
 </style>
