@@ -10,6 +10,7 @@
     export let data_dot =[];
     //console.log("Verifying output: ", Object.keys(data_person).length);
     let data_values = Object.values(data_dot)
+    $: {data_values= Object.values(data_dot)}
 
 </script>
 
@@ -38,5 +39,10 @@
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         animation-delay: 100ms;
+    }
+    @keyframes floating {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 3px); }
+        100%   { transform: translate(0, -0px); }   
     }
 </style>

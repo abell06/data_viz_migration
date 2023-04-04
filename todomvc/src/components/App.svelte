@@ -2,8 +2,13 @@
 
     import Person from '../components/Person.svelte';
     import Dot from '../components/Dot.svelte';
-    import violence_data from '../components/irregularviolence.json';
-    import no_violence_data from '../components/irregular_no_violence.json';
+    //import violence_data from '../components/irregularviolence.json';
+    //import no_violence_data from '../components/irregular_no_violence.json';
+    import all_violence_data from '../components/all_violence_data.json';
+
+    let violence_data = all_violence_data.filter(all_violence_data => (all_violence_data.experienced_violence_yn==1));
+    let no_violence_data = all_violence_data.filter(all_violence_data => (all_violence_data.experienced_violence_yn==0));
+
 
     //Obtain data for gender filter
     let filtered_data_violence = violence_data.filter(violence_data => (violence_data.mig_ext_sex==1));
@@ -18,18 +23,24 @@
     let s_violence_rate_opp_filter = Number(violence_rate_opp_filter).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
 
     //Obtain data for motivation filter
-    let filtered_data_violence1 = violence_data.filter(violence_data => (violence_data.mig_ext_motivo/3==1));
-    let opposing_filtered_data_violence1 = violence_data.filter(violence_data => (violence_data.mig_ext_motivo/3!=1));
-    let filtered_data_no_violence1 = no_violence_data.filter(no_violence_data => (no_violence_data.mig_ext_motivo/3==1));
-    let opposing_filtered_data_no_violence1 = no_violence_data.filter(no_violence_data => (no_violence_data.mig_ext_motivo/3!=1));
+    let filtered_data_violence1 = violence_data.filter(violence_data => (violence_data.motivation==1));
+    let opposing_filtered_data_violence1 = violence_data.filter(violence_data => (violence_data.motivation!=1));
+    let filtered_data_no_violence1 = no_violence_data.filter(no_violence_data => (no_violence_data.motivation==1));
+    let opposing_filtered_data_no_violence1 = no_violence_data.filter(no_violence_data => (no_violence_data.motivation=1));
 
     const options = [
-		{ filter: 'Sort by gender', v_filter_on: filtered_data_violence},
-		{ filter: 'Sort by motivation to migrate',  v_filter_on: filtered_data_violence1},
-		{ filter: 'Sort by accompanying travelers'},
+		{ filter: 'Data by gender', left_text: 'Female migrants', text: 'Female migrants in the data were less likely to report violence.', v_filter_on: filtered_data_violence, nv_filter_on: filtered_data_no_violence, v_filter_off: opposing_filtered_data_violence, nv_filter_off:opposing_filtered_data_no_violence},
+		{ filter: 'Data by motivation to migrate', left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: 'People migrating because of deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.',  v_filter_on: filtered_data_violence1, nv_filter_on: filtered_data_no_violence1, v_filter_off: opposing_filtered_data_violence1, nv_filter_off:opposing_filtered_data_no_violence1},
+		{ filter: 'Data by accompanying travelers'},
 	];
 
 	let selected = options[0];
+
+    $: {violence_rate_filter = Object.keys(selected.v_filter_on).length/(Object.keys(selected.v_filter_on).length + Object.keys(selected.nv_filter_on).length)
+        s_violence_rate_filter = Number(violence_rate_filter).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+        violence_rate_opp_filter = Object.keys(selected.v_filter_off).length/(Object.keys(selected.v_filter_off).length + Object.keys(selected.nv_filter_off).length)
+        s_violence_rate_opp_filter = Number(violence_rate_opp_filter).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2});
+    }
 
 </script>
 
@@ -37,27 +48,20 @@
 <main>
 
 
-    <h2 style="margin-top: 5px">Reported violence by various migrant characteristics </h2>
+    <h2 style="margin-top: 5px">Are some "irregular" migrants experiencing violence at higher rates than others?</h2>
 
     <select bind:value={selected}>
         {#each options as option}
             <option value={option}>{option.filter}</option>
         {/each}
     </select>
-    {#if selected.filter === 'Sort by gender'}
-	    <p>Violence by gender</p>
-    {:else if selected.filter === 'Sort by motivation to migrate'}
-	    <p>by x</p>
-    {:else if selected.filter === 'Sort by accompanying travelers'}
-	    <p>by y</p>
-    {/if}
 
-    <p>{selected.filter}</p>
+    <p>{selected.text}</p>
 
     <h3 style="margin-top: 10px">Migrants reporting violence</h3>
     <div class = "violence_grid">
         <section class="humans_filter1">
-            <p style = "font-style: italic">Female migrants</p>
+            <p style = "font-style: italic">{selected.left_text}</p>
             <p>Rate of reported violence: {s_violence_rate_filter}</p>
 
             <Person data_person = {selected.v_filter_on}/>
@@ -66,7 +70,7 @@
         <section class="humans_filter2">
             <p style = "font-style: italic">All others</p>
             <p>Rate of reported violence: {s_violence_rate_opp_filter}</p>
-            <Person data_person = {opposing_filtered_data_violence}/>
+            <Person data_person = {selected.v_filter_off}/>
         </section>
 
 
@@ -74,11 +78,11 @@
     <h3 style="margin-top: 10px">Migrants not reporting violence</h3>
     <div class = "no_violence_grid">
         <section class="dots_filter1">
-            <Dot data_dot = {filtered_data_no_violence}/>
+            <Dot data_dot = {selected.nv_filter_on}/>
         </section>
 
         <section class="dots_filter2">
-            <Dot data_dot = {opposing_filtered_data_no_violence}/>
+            <Dot data_dot = {selected.nv_filter_off}/>
         </section>
     </div>
 

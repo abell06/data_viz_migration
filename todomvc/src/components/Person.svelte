@@ -11,6 +11,7 @@
     export let data_person =[];
     //console.log("Verifying output: ", Object.keys(data_person).length);
     let data_values = Object.values(data_person)
+    $: {data_values= Object.values(data_person)}
 
 </script>
 
@@ -62,6 +63,11 @@
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
+    }
+    @keyframes floating {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 3px); }
+        100%   { transform: translate(0, -0px); }   
     }
     g:hover {
         opacity: 0.5;
