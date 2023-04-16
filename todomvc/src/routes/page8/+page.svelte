@@ -1,5 +1,5 @@
 <script>
-    import App from '../../components/App.svelte';
+    import App_interact from '../../components/App_interact.svelte';
 </script>
 
-<App />
+<App_interact />
