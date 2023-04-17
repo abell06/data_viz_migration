@@ -1,7 +1,7 @@
 <script>
 
-    import Person from '../components/Person.svelte';
-    import Dot from '../components/Dot.svelte';
+    import Person from '../components/new_person.svelte';
+    import Dot from '../components/new_dot.svelte';
     //import violence_data from '../components/irregularviolence.json';
     //import no_violence_data from '../components/irregular_no_violence.json';
     import all_violence_data from '../components/all_violence_data.json';
@@ -79,7 +79,8 @@
     } */
     .humans {
         display: inline-block;
-        margin-left: 50px;
+        margin-left: 0px;
+        margin-right: 00px;
     }
 
     .person {

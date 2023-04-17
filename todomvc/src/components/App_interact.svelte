@@ -1,22 +1,30 @@
 <script>
 
-    import Person from '../components/Person.svelte';
-    import Dot from '../components/Dot.svelte';
+    //import Person from '../components/Person.svelte';
+    import Person from '../components/new_person.svelte';
+    import Dot from '../components/new_dot.svelte';
     import all_violence_data from '../components/all_violence_data.json';
     import ButtonContainer from './ButtonContainer.svelte';
 
     //filers for different violence types
     const violence_options = [
-		{ text: 'Threat/Intimidation', filterFunction: (e) => {return e.violence_strings.includes("Threat \/ Intimidation");}},
+		{ text: 'Any incident of violence', filterFunction: (e) => {return !e.violence_strings.includes("None");}},
+        { text: 'Threat/ Intimidation', filterFunction: (e) => {return e.violence_strings.includes("Threat \/ Intimidation");}},
 		{ text: 'Physical aggression', filterFunction: (e) => {return e.violence_strings.includes("Physical aggression");}},
-		{ text: 'Extortion/attempted extortion', filterFunction: (e) => {return e.violence_strings.includes("Extortion \/ Attempted extortion");}},
-        { text: 'Armed robbery', filterFunction: (e) => {return e.violence_strings.includes("Armed robbery");}}
+		{ text: 'Extortion/ attempted extortion', filterFunction: (e) => {return e.violence_strings.includes("Extortion \/ Attempted extortion");}},
+        { text: 'Armed robbery', filterFunction: (e) => {return e.violence_strings.includes("Armed robbery");}},
+        { text: 'Theft', filterFunction: (e) => {return e.violence_strings.includes("Theft");}},
+        { text: 'Sexual harassment or assault', filterFunction: (e) => {return e.violence_strings.includes("Sexual harassment or assault");}},
+        { text: 'Kidnapping/ Attempted kidnapping', filterFunction: (e) => {return e.violence_strings.includes("Kidnapping \/ Attempted kidnapping");}},
+        { text: 'Attemped murder', filterFunction: (e) => {return e.violence_strings.includes("Attempted murder");}},
+        { text: 'Passed away or missing', filterFunction: (e) => {return e.violence_strings.includes("Passed away or whereabouts are unknown");}},
 	];
     let selected_violence_option = violence_options[0];
     let options = [
 		{ filter: 'Sort by gender', filterFunction: (e) => {return e.mig_ext_sex ===1;}, left_text: 'Female migrants', text: 'Female migrants in the data were less likely to report violence.'},
 		{ filter: 'Sort by motivation to migrate', filterFunction: (e) => {return e.motivation ===1;}, left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: 'People migrating because of deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.'},
 		{ filter: 'Sort by accompanying travelers', filterFunction: (e) => {return e.acompany ===1;}, left_text: 'Migrants traveling alone'},
+        { filter: 'Sort by mode of travel', filterFunction: (e) => {return e.medio ===1;}, left_text: 'Migrants traveling in a caravan'},
 	];
     let selected = options[0];
 
@@ -57,7 +65,7 @@
 <main>
 
 
-    <h2 style="margin-top: 5px">Type of violence x migrant characteristics</h2>
+    <h2 style="margin-top: 5px">Explore how different types of violence experienced interact with migrant characteristics</h2>
 
     
 
@@ -96,7 +104,7 @@
     </div>
 
 
-    <h3 style="margin-top: 10px">Migrants reporting {selected_violence_option.text}</h3>
+    <h3 style="margin-top: 10px; color: #F8553D;">Migrants reporting {selected_violence_option.text} </h3>
     <div class = "violence_grid">
         <section class="humans_filter1">
             <p style = "font-style: italic">{selected.left_text}</p>
@@ -113,7 +121,7 @@
 
 
     </div>
-    <h3 style="margin-top: 10px">Migrants not reporting violence</h3>
+
     <div class = "no_violence_grid">
         <section class="dots_filter1">
             <Dot data_dot = {data_no_violence_left}/>
@@ -146,35 +154,6 @@
         box-sizing: border-box;
     }
 
-    /* .humans {
-        align-items: flex-start;
-        display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
-        display: flex;
-        height: 300px;
-        width: 500px;
-        background: blue;
-        flex-wrap: wrap;
-        flex-direction: row;
-    } */
-    /* .person {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex: 0 1 10%;
-    } */
-    .humans {
-        display: inline-block;
-        margin-left: 50px;
-    }
-
-    .person {
-        height: 40px;
-        width: 40px;
-        animation-name: floating;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-    }
     g:hover {
         opacity: 0.5;
         cursor:pointer;
@@ -201,12 +180,6 @@
         width: 100%;
     }
 
-    input {
-        padding-left: 20px;
-        line-height: 72px;
-        font-style: italic;
-        border: none;
-    }
 
     ::placeholder {
         color: #9e9e9e;
@@ -224,27 +197,6 @@
         line-height: 1.5;
     }
 
-    .todos {
-        display: inline-block;
-        vertical-align:top;
-        width: 500px;
-        background-color: var(--color-bg);
-        border-radius: 5px;
-        border: 1px solid var(--color-outline);
-        box-shadow: 0 0 4px var(--color-shadow);
-    }
-
-    .graph {
-        display: inline-block;
-        margin-left: 50px;
-    }
-
-    .actions {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
     .actions:before {
         content: "";
         height: 40px;
@@ -290,6 +242,8 @@
 
         flex-wrap: wrap;
         flex-direction: row;
+        
+        
 
         }
 
@@ -297,7 +251,9 @@
         flex-grow: 1;
         flex-shrink: 0;
         width: 50%;
-        height: 100vh;
+        /*height: 100vh;*/
+        padding: 40px;
+        
 
         }
 
@@ -305,6 +261,7 @@
         width: 50%;
         flex-grow: 1;
         flex-shrink: 0;
+        padding: 40px;
 
         } 
     .no_violence_grid {
@@ -323,6 +280,7 @@
         flex-shrink: 0;
         width: 50%;
         height: 100vh;
+        padding: 40px;
 
         }
 
@@ -330,7 +288,7 @@
         width: 50%;
         flex-grow: 1;
         flex-shrink: 0;
-
+        padding: 40px;
         } 
 
     /* Style the buttons */
@@ -339,23 +297,24 @@
         /*height: 170px;*/
         /*text-transform: uppercase;
         font-weight: 200;*/
-        font-size: 1.1rem;
+        font-size: 16px;
         letter-spacing: 1px;
         border: none;
         outline: none;
         margin: 10px;
         padding: 20px 20px 20px;
-        background-color: white;
-        border: 1px solid black;
+        background-color:#2E2F48 ;
+        /*border: 1px solid black;*/
         cursor: pointer;
         transition: .1s ease-in-out;
+        color: white;
     }
 
 
         /* Add a dark background color to the active button */
     .btn:active,
     .active {
-        background-color: #000;
-        color: white;
+        background-color: #ECEE41;
+        color: black;
     }
 </style>
