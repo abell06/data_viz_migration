@@ -1,6 +1,6 @@
 <script>
 
-    import Person from '../components/new_person.svelte';
+    import Person from '../components/test.svelte';
     import Dot from '../components/new_dot.svelte';
     //import violence_data from '../components/irregularviolence.json';
     //import no_violence_data from '../components/irregular_no_violence.json';
@@ -22,21 +22,15 @@
     <h2 style="margin-top: 5px">The survey asked whether each migrant experienced violence on their journey. Of the 1249 "irregular" migrants included in the survey, 317 reported experiencing at least one type of violence.</h2>
 
 
-    <h3 style="margin-top: 10px">Migrants reporting violence</h3>
+    <h3 style="margin-top: 10px; color: #F8553D;">Migrants reporting violence</h3>
     <div class = "violence_grid">
         <section class="humans">
             <p>Rate of reported violence: {s_violence_rate_filter}</p>
 
-            <Person data_person = {violence_data}/>
+            <Person data_dot = {all_violence_data}/>
         </section>
 
 
-    </div>
-    <h3 style="margin-top: 10px">Migrants not reporting violence</h3>
-    <div class = "no_violence_grid">
-        <section class="dots_filter1">
-            <Dot data_dot = {no_violence_data}/>
-        </section>
     </div>
 
 </main>
@@ -81,6 +75,7 @@
         display: inline-block;
         margin-left: 0px;
         margin-right: 00px;
+        justify-content: center;
     }
 
     .person {
@@ -105,6 +100,7 @@
         font-size: 24px;
         color: var(--color-text);
         margin-top: 80px;
+        justify-content: center;
     }
 
     label,
@@ -140,58 +136,7 @@
         line-height: 1.5;
     }
 
-    .todos {
-        display: inline-block;
-        vertical-align:top;
-        width: 500px;
-        background-color: var(--color-bg);
-        border-radius: 5px;
-        border: 1px solid var(--color-outline);
-        box-shadow: 0 0 4px var(--color-shadow);
-    }
 
-    .graph {
-        display: inline-block;
-        margin-left: 50px;
-    }
-
-    .actions {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .actions:before {
-        content: "";
-        height: 40px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        box-shadow: 0 1px 1px var(--color-shadow-1), 0 8px 0 -3px var(--color-shadow-1),
-            0 9px 1px -3px var(--color-bg-1), 0 16px 0 -6px var(--color-shadow-1),
-            0 17px 2px -6px var(--color-bg-1);
-        z-index: -1;
-    }
-    	/* dynamic classes for the tooltip */
-	.tooltip-hidden {
-		visibility: hidden;
-		font-family: "Nunito", sans-serif;
-		width: 200px;
-		position: absolute;
-	}
-
-	.tooltip-visible {
-		font: 15px sans-serif;
-		font-family: "Nunito", sans-serif;
-		visibility: visible;
-		background-color: #f0dba8;
-		border-radius: 10px;
-		width: 200px;
-		color: black;
-		position: absolute;
-		padding: 10px;
-	}
 
  
     @keyframes floating {
@@ -206,6 +151,7 @@
 
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: center;
 
         }
 
