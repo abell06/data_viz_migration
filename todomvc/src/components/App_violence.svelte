@@ -1,6 +1,6 @@
 <script>
 
-    import Person from '../components/test.svelte';
+    import Person from '../components/new_test.svelte';
     import Dot from '../components/new_dot.svelte';
     //import violence_data from '../components/irregularviolence.json';
     //import no_violence_data from '../components/irregular_no_violence.json';
@@ -19,7 +19,7 @@
 <main>
 
 
-    <h2 style="margin-top: 5px">The survey asked whether each migrant experienced violence on their journey. Of the 1249 "irregular" migrants included in the survey, 317 reported experiencing at least one type of violence.</h2>
+    <!-- <h2 style="margin-top: 5px">The survey asked whether each migrant experienced violence on their journey. Of the 1249 "irregular" migrants included in the survey, 317 reported experiencing at least one type of violence.</h2> -->
 
 
     <h3 style="margin-top: 10px; color: #F8553D;">Migrants reporting violence</h3>

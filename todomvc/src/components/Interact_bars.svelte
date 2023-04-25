@@ -9,6 +9,21 @@
 		x: 0, y: 0
 	};
 
+    //filers for different violence types
+    const violence_options = [
+		{ text: 'Any incident of violence', violence_type:'experienced_violence_yn' ,filterFunction: (e) => {return !e.violence_strings.includes("None");}},
+        { text: 'Threat/ Intimidation', violence_type:'mig_ext_violence\/5' ,filterFunction: (e) => {return e.violence_strings.includes("Threat \/ Intimidation");}},
+		{ text: 'Physical aggression', violence_type:'mig_ext_violence\/6' , filterFunction: (e) => {return e.violence_strings.includes("Physical aggression");}},
+		{ text: 'Extortion/ attempted extortion', violence_type:'mig_ext_violence\/2' , filterFunction: (e) => {return e.violence_strings.includes("Extortion \/ Attempted extortion");}},
+        { text: 'Armed robbery', violence_type:'mig_ext_violence\/4' , filterFunction: (e) => {return e.violence_strings.includes("Armed robbery");}},
+        { text: 'Theft', violence_type:'mig_ext_violence\/3' , filterFunction: (e) => {return e.violence_strings.includes("Theft");}},
+        { text: 'Sexual harassment or assault', violence_type:'mig_ext_violence\/7' , filterFunction: (e) => {return e.violence_strings.includes("Sexual harassment or assault");}},
+        { text: 'Kidnapping/ Attempted kidnapping', violence_type:'mig_ext_violence\/8' , filterFunction: (e) => {return e.violence_strings.includes("Kidnapping \/ Attempted kidnapping");}},
+        { text: 'Attemped murder', violence_type:'mig_ext_violence\/9' , filterFunction: (e) => {return e.violence_strings.includes("Attempted murder");}},
+        { text: 'Passed away or missing', violence_type:'mig_ext_violence\/10' , filterFunction: (e) => {return e.violence_strings.includes("Passed away or whereabouts are unknown");}},
+	];
+    let selected_violence_option = violence_options[0];
+    let selected_violence_type = selected_violence_option.violence_type
 
     let options = [
 		{ filter: 'Compare by motivation to migrate', select_by:'mig_ext_motivo', filterFunction: (e) => {return e.motivation ===1;}, left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: 'People migrating because of deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.'},
@@ -18,17 +33,19 @@
     let selected = options[0];
 
     let chart_data = data.filter(data => (data.select_by ==selected.select_by));
+
     let sorted_chart_data = chart_data.sort(
-        (p1, p2) => (p1.experienced_violence_yn < p2.experienced_violence_yn) ? 1 : (p1.experienced_violence_yn > p2.experienced_violence_yn) ? -1 : 0);
+        (p1, p2) => (p1[selected_violence_type] < p2[selected_violence_type]) ? 1 : (p1[selected_violence_type] > p2[selected_violence_type]) ? -1 : 0);
     let xVals = sorted_chart_data.map((el) => el.categories);
-    let yVals = sorted_chart_data.map((el) => el.experienced_violence_yn).map(Number);
+    let yVals = sorted_chart_data.map((el) => el[selected_violence_type]).map(Number);
     let xTicks = xVals
     $: {
+        selected_violence_type = selected_violence_option.violence_type
         chart_data = data.filter(data => (data.select_by ==selected.select_by));
         sorted_chart_data = chart_data.sort(
-        (p1, p2) => (p1.experienced_violence_yn < p2.experienced_violence_yn) ? 1 : (p1.experienced_violence_yn > p2.experienced_violence_yn) ? -1 : 0);
+        (p1, p2) => (p1[selected_violence_type] < p2[selected_violence_type]) ? 1 : (p1[selected_violence_type] > p2[selected_violence_type]) ? -1 : 0);
         xVals = sorted_chart_data.map((el) => el.categories);
-        yVals = sorted_chart_data.map((el) => el.experienced_violence_yn).map(Number);
+        yVals = sorted_chart_data.map((el) => el[selected_violence_type]).map(Number);
         xTicks = xVals
     }
 
@@ -60,10 +77,25 @@
 </script>
 
 <main>
-    <h2 style="margin-top: 5px">Explore potential drivers of differences in reported rates of violence by migrants</h2>
+    <!-- <h2 style="margin-top: 5px">Explore potential drivers of differences in reported rates of violence by migrants</h2> -->
 
     <div class = "buttons_grid">
+        <section class = left_buttons>
+            <p style="margin-top: 0px">Filter by violence type</p>
+            <ButtonContainer >
+                {#each violence_options as violence_option}
+                    <button class:active={selected_violence_option === violence_option} 
+                                    class="btn" 
+                                    data-name={violence_option.text} 
+                                    on:click= {()=>selected_violence_option = violence_option}
+                                    value = {violence_option}>
+                        {violence_option.text}
+                    </button>            
+                {/each}
+            </ButtonContainer>
+        </section>
         <section class = right_buttons>
+            <p style="margin-top: 0px">Choose comparator</p>
             <p style="margin-top: 10px"></p>
             <ButtonContainer>
                 {#each options as option}
@@ -95,7 +127,8 @@
                 
                     <g class="tick" >
                         <text x=0 y="500">Highest rate of reported violence</text>
-                        <text x=700 y="500">Lowest rate of reported violence</text>
+                        <text x=500 y="500">Lowest rate of reported violence</text>
+                        <text x=65 y="15">of migrants reporting violence</text>
                     </g>
                 
             </g>
@@ -120,7 +153,7 @@
     </div>
     <div
     class={hovered === -1 ? "tooltip-hidden": "tooltip-visible"}	
-    style="left: {recorded_mouse_position.x + 20}px; top: {recorded_mouse_position.y + 20}px"
+    style="left: {recorded_mouse_position.x}px; top: {recorded_mouse_position.y-1000}px"
 >
     {#if hovered !== -1}
         {xVals[hovered]} 
@@ -163,7 +196,7 @@
 	svg {
 		position: relative;
 		width: 100%;
-		height: 400px;
+		height: 50vh;
         overflow: visible;
 	}
 
@@ -203,7 +236,7 @@
     }
         /* Style the buttons */
         .btn {
-        width: 170px;
+        width: 150px;
         /*height: 170px;*/
         /*text-transform: uppercase;
         font-weight: 200;*/
