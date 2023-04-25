@@ -1,6 +1,6 @@
 <script>
 
-    import Person from '../components/new_test.svelte';
+    import Person from '../components/Separated_circles.svelte';
     import Dot from '../components/new_dot.svelte';
     //import violence_data from '../components/irregularviolence.json';
     //import no_violence_data from '../components/irregular_no_violence.json';

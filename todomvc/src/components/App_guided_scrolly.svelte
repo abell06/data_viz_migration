@@ -5,7 +5,7 @@
     import Dot from './new_dot.svelte';
     import all_violence_data from '../components/all_violence_data.json';
     import ButtonContainer from './ButtonContainer.svelte';
-    import Person_cluster from './new_test.svelte';
+    import Person_cluster from './Separated_circles.svelte';
 
     let hovered = -1;
     let hovered_1 = -1;
