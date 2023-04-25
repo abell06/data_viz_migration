@@ -99,11 +99,15 @@
     console.log(data_sorted[0].value);
     for (let i = 0; i < violence_data.length; i++) {
         data_sorted[i].value = 1;
+        data_sorted[i].data = base.leaves()[data_dot.length-i-1].data;
+        data_sorted[i].x = data_sorted[i].x - 10
     }
     for (let i = violence_data.length; i<data_dot.length;i++){
         data_sorted[i].value = 0;
+        data_sorted[i].data = base.leaves()[0].data;
     }
-    console.log(groups)
+    console.log(data_sorted)
+    console.log(base.leaves())
 
 </script>
 
