@@ -3,15 +3,18 @@
     import Bars from '../components/Interact_bars.svelte';
     import App_violence from '../components/App_violence.svelte';
     import App_guided from '../components/App_guided_scrolly.svelte';
+    import myImage from '../Pilar.png';
 
     let count, index, offset, progress;
 </script>
 
 <main>
     <div class = 'bookend'>
-        <h1 style="margin-top: 0px">Exploring risk factors related to violence reported by migrants whose external migration was characterized as "irregular"</h1>
-        <h2 style="margin-top: 50px">*here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</h2>
-        <p style ="margin-top: 100px">Scroll to continue</p>
+        <h1 style="margin-top: 0px">Exploring risk factors related to violence reported by migrants whose external migration was characterized as "irregular*"</h1>
+        <p style="margin-top: 50px">*here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</p>
+        <h4 style ="margin-top: 100px">Scroll to continue</h4>
+        <!-- <img src={myImage} alt="My Image"> -->
+        <div style = "height:500px"></div>
     </div>
     
 
@@ -38,21 +41,99 @@
       <progress value={progress || 0} />
     </div> -->
       {#if index === 0}
-          <h2 style="margin-top: 5px">0 section text</h2>
+      
+      <h3 style="margin-top: 5px">
+        Irregular migrant vulnerablity
+
+      </h3>  
+      
+      <h5 style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey. 
+        </h5>
+
+        <p style="margin-center: 100px;">Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
+
+        </p>
+
 
         {/if}
         {#if index === 1}
         
-        <h2 style="margin-top: 5px">The survey asked whether each migrant experienced violence on their journey. Of the 1249 "irregular" migrants included in the survey, 317 reported experiencing at least one type of violence.</h2>
+       
 
       {/if}
-      {#if index > 2 && index <=9}
-      <h2 style="margin-top: 5px">Are some "irregular" migrants experiencing violence at higher rates than others?</h2>
+
+      {#if index === 2}
+        
+      <h3 style="margin-top: 5px">
+        Gender vulnerablity
+
+      </h3>
+
+      <p style="margin-top: 5px;">According to the survey, women (20%) were less likely to suffer from violence than men (27%).</p>
+      <p style="margin-top: 5px;">This stat does not reflect however other studies that report that 80% of women experience rape and sexual assault during migration[source]. This may be due to the fact that the survey is collected from the family members of the migrants who are ashamed of the traumatic experience and decide not to share it with their family members back home.
+      </p>
+      {/if} 
+
+      {#if index === 4}
+        
+        <h3 style="margin-top: 5px">
+          Migration motives
+
+        </h3>
+
+        <p style="margin-top: 5px">Natural hazards are increasingly becoming a motive for migration from central America. In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy.   [source] 
+        </p>
+
+        <p style="margin-top: 5px">Many decided to migrate at that exact moment. The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors
+        </p>
+      {/if} 
+
+      {#if index === 6}
+      <h3 style="margin-top: 5px">
+        Migration companion 
+      </h3>
+
+      <p style="margin-top: 5px">Attempting to travel alone has many perils. It is easy to be targeted by cartels and human smugglers who are looking for desperate lost people. This is why most people opt to either pay a coyote who know the lay of the land or join a migrant caravan. 
+      </p>
+
+    {/if} 
+
+
+    {#if index === 8}
+          
+    <h3 style="margin-top: 5px">
+      Migration method of travel 
+    </h3>
+
+    <p style="margin-top: 5px">Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children. The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them.
+    </p>
+
+    <p style="margin-top: 5px">The reality was far from this. Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable and easy targets for bad actors. 
+    </p>
+
+ 
+
+
+  {/if} 
+
+
+      {#if index == 9}
+      <p style="margin-top: 5px">Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted. 
+
+      </p>
+  
+      <p style="margin-top: 5px">Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds.
+  
+      </p>
 
 
         {/if}
       {#if index > 9}
-        <h2 style="margin-top: 50px">Exploring potential drivers of differences in reported rates of violence by migrants.</h2>
+        <h4 style="margin-top: 50px">
+          In this section we allow the user to interact with the data by reviewing the different risk factors and how they relate to each other across different travel conditions. Please select one 
+          of the violence type and one of the comparators to view the bar chart. We organize this data from highest risk factor to lowest risk factor so as to not only understand the most dangerous factors
+          but also the safest. Hover over the bars to see the category of each bar.
+        </h4>
 
 
       {/if}
@@ -61,20 +142,61 @@
   </div>
 
   <div class="foreground" slot="foreground" >
-    <section>This is the first section.</section>
+
+
+
+    <h5 style="margin-top: 60px; margin-right: 20px">Data collected from approximately 5,000 household interviews and over 6,000 web survey responses across the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better understand the factors in migration. </h5>
+    <p style="margin-top: 10px; margin-right: 20px; font-size: smaller; font-style: italic;">It is key to remember that this survey was conducted on migrants after their journey which means that the data we are seeing is likely subject to Survivor Bias.</p>
+
     <App_violence />
     <div style = "height:100px"></div>
     <App_guided select_index = 0/>
+    <!-- Use the img tag and set its src attribute to the imported image -->
+    <img src={myImage} alt="My Image" style="width: 1000px; height: 1000px;">
+
+    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
+      &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap. They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador, (February 2020)
+    </h3>
     <div style = "height:100px"></div>
 
     <App_guided select_index = 1/>
+    
     <div style = "height:100px"></div>
+
+    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
+      &ldquo; We are doomed here. The desperation, the sadness, that's what makes you migrate." - Magdalena Flores (Honduras 2020)
+    </h3>
+
+
+    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
+      &ldquo; I never wanted to do this.” - Said Ana Hernández, clutching her 11-year-old's hand at a gas station - “The situation is forcing me to. You get to a point where you don't have anything to give them to eat.” (Honduras 2020)
+    </h3>
+    <div style = "height:100px"></div>
+
 
     <App_guided select_index = 2/>
-    <div style = "height:100px"></div>
+    
+    <div style = "height:100px">
+    </div>
+
 
     <App_guided select_index = 3/>
-    <!-- <div style = "height:0px"></div> -->
+    <div style = "height:100px"></div>
+    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
+      &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things, from the idea of reaching the north to being well united.” - Andrea (September 2019)
+    </h3>
+    <div style = "height:100px"></div>
+    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
+      &ldquo; It hasn't been easy to come in the caravan because everything is difficult. Contrary to what I thought, there aren't many facilities, and it takes a lot of effort to come in the caravan. You have to walk a lot, rest little, and even when you rest, you're always taking care of yourself. There's a lack of trust with those you come with because not everyone knows each other. There are many problems, and the journey in the caravan is not safe.” - Alicia (September 2019)
+
+    </h3>
+    <div style = "height:100px"></div>
+
+    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
+      &ldquo; In the end, there were so many of us, it was scary. When my wife went to the bathroom, someone touched her inappropriately, but she didn't tell me out of fear until the next day. There was nothing I could do.” - Rodrigo (2020)
+
+
+    </h3>
     <div style = "height:100px"></div>
 
     <Bars style="margin-left: 50px"/>
@@ -85,7 +207,11 @@
 </main>
 <main>
     <div class = 'bookend'>
-        <h2 style="margin-top: 0px">Placeholder for conclusion + call for action</h2>
+        <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+        <h4 style="margin-top: 50px">Our goal is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.</h4>
+        <h3 style="margin-top: 50px">We aim to shed light on the most vulnerable forms of travel in a way that is understandable to the general public. If you have been moved by these data points and stories,  <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.</h3>
+        <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.</h3>
+        
     </div>
     
 
