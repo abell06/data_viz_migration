@@ -186,14 +186,7 @@
       
     }
 
-    .person{
-      animation-name: boat;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        
-        animation-delay: 250ms;
-    }
+
   
     .node:hover {
       font-weight: 700;
@@ -235,11 +228,7 @@
       position: absolute;
       padding: 10px;
     }
-    @keyframes boat {
-        0% { transform: translate(0,  0px); }
-        50%  { transform: translate(0, 3px); }
-        100%   { transform: translate(0, -0px); }  
-	  }
+
 
 
   </style>
