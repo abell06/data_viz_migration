@@ -238,26 +238,28 @@
 
         flex-wrap: wrap;
         flex-direction: row;
-        
+        justify-content: start;
         
 
         }
 
     .humans_filter1 {
-        flex-grow: 1;
+
+        /*flex-grow: 1;
         flex-shrink: 0;
         width: 50%;
         /*height: 100vh;*/
         padding: 10px;
-        
-
+        justify-content: start;
+        width: 50%;
         }
 
     .humans_filter2 {
         width: 50%;
         flex-grow: 1;
         flex-shrink: 0;
-        padding: 40px;
+        padding: 10px;
+        justify-content: start;
 
         } 
 

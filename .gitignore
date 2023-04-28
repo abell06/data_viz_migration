@@ -348,3 +348,14 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+todomvc/.svelte-kit/
+
+todomvc/.DS_Store
+
+.DS_Store
+
+todomvc/build/
+
+

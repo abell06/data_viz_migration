@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  },
+  "dependencies": {
+    "@sveltejs/svelte-scroller": "^2.0.7"
+  }
+}
