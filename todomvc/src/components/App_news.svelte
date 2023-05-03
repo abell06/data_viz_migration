@@ -4,6 +4,7 @@
     import App_violence from '../components/App_violence.svelte';
     import App_guided from '../components/App_guided_scrolly.svelte';
     import myImage from '../Pilar.png';
+    import { fit, parent_style } from '@leveluptuts/svelte-fit';
 
     let count, index, offset, progress;
 </script>
@@ -41,19 +42,22 @@
       <progress value={progress || 0} />
     </div> -->
       {#if index === 0}
-      
-      <h3 style="margin-top: 5px">
-        Irregular migrant vulnerablity
+        <div class="container text-sizing">
+          <div style={parent_style}>
+          <h2  style="margin-top: 5px">
+          Irregular migrant vulnerablity
 
-      </h3>  
-      
-      <h5 style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey. 
-        </h5>
+          </h2>  
+          
+            <!-- <h5 use:fit style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey. 
+            </h5> -->
+          
 
-        <p style="margin-center: 100px;">Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
+          <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey.<br> Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
 
-        </p>
-
+          </p>
+        </div>
+        </div>
 
         {/if}
         {#if index === 1}
@@ -63,53 +67,59 @@
       {/if}
 
       {#if index === 2}
-        
-      <h3 style="margin-top: 5px">
-        Gender vulnerablity
+        <div class="container text-sizing"> 
+          <div style={parent_style}>
+            <h2 style="margin-top: 5px">
+              Gender vulnerablity
 
-      </h3>
+            </h2>
 
-      <p style="margin-top: 5px;">According to the survey, women (20%) were less likely to suffer from violence than men (27%).</p>
-      <p style="margin-top: 5px;">This stat does not reflect however other studies that report that 80% of women experience rape and sexual assault during migration[source]. This may be due to the fact that the survey is collected from the family members of the migrants who are ashamed of the traumatic experience and decide not to share it with their family members back home.
-      </p>
+            <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;">According to the survey, women (20%) were less likely to suffer from violence than men (27%). This stat does not reflect however other studies that report that 80% of women experience rape and sexual assault during migration[source]. This may be due to the fact that the survey is collected from the family members of the migrants who are ashamed of the traumatic experience and decide not to share it with their family members back home.
+            </p>
+          </div> 
+        </div>  
       {/if} 
 
       {#if index === 4}
-        
-        <h3 style="margin-top: 5px">
-          Migration motives
+        <div class="container text-sizing"> 
+          <div style={parent_style}>
+            <h2 style="margin-top: 5px">
+              Migration motives
 
-        </h3>
+            </h2>
 
-        <p style="margin-top: 5px">Natural hazards are increasingly becoming a motive for migration from central America. In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy.   [source] 
-        </p>
-
-        <p style="margin-top: 5px">Many decided to migrate at that exact moment. The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors
-        </p>
+            <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Natural hazards are increasingly becoming a motive for migration from central America. In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy.   [source] Many decided to migrate at that exact moment. The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors.
+            </p>
+          </div> 
+        </div>
       {/if} 
 
-      {#if index === 6}
-      <h3 style="margin-top: 5px">
-        Migration companion 
-      </h3>
+    {#if index === 6}
+      <div class="container text-sizing"> 
+        <div style={parent_style}>
+          <h2 style="margin-top: 5px">
+            Migration companion 
+          </h2>
 
-      <p style="margin-top: 5px">Attempting to travel alone has many perils. It is easy to be targeted by cartels and human smugglers who are looking for desperate lost people. This is why most people opt to either pay a coyote who know the lay of the land or join a migrant caravan. 
-      </p>
+          <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Attempting to travel alone has many perils. It is easy to be targeted by cartels and human smugglers who are looking for desperate lost people. This is why most people opt to either pay a coyote who know the lay of the land or join a migrant caravan. 
+          </p>
+        </div> 
+      </div>
 
     {/if} 
 
 
     {#if index === 8}
-          
-    <h3 style="margin-top: 5px">
-      Migration method of travel 
-    </h3>
+    <div class="container text-sizing"> 
+      <div style={parent_style}>     
+        <h2 style="margin-top: 5px">
+          Migration method of travel 
+        </h2>
 
-    <p style="margin-top: 5px">Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children. The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them.
-    </p>
-
-    <p style="margin-top: 5px">The reality was far from this. Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable and easy targets for bad actors. 
-    </p>
+        <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children. The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. <br> The reality was far from this. Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable and easy targets for bad actors. 
+        </p>
+      </div> 
+    </div>
 
  
 
@@ -118,22 +128,25 @@
 
 
       {#if index == 9}
-      <p style="margin-top: 5px">Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted. 
-
-      </p>
-  
-      <p style="margin-top: 5px">Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds.
-  
-      </p>
-
+      <div class="container text-sizing"> 
+        <div style={parent_style}>  
+          <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted.<br> Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds.
+      
+          </p>
+        </div> 
+      </div>
 
         {/if}
       {#if index > 9}
-        <h4 style="margin-top: 50px">
-          In this section we allow the user to interact with the data by reviewing the different risk factors and how they relate to each other across different travel conditions. Please select one 
-          of the violence type and one of the comparators to view the bar chart. We organize this data from highest risk factor to lowest risk factor so as to not only understand the most dangerous factors
-          but also the safest. Hover over the bars to see the category of each bar.
-        </h4>
+      <div class="container text-sizing"> 
+        <div style={parent_style}> 
+          <h4 use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 50px">
+            In this section we allow the user to interact with the data by reviewing the different risk factors and how they relate to each other across different travel conditions. Please select one 
+            of the violence type and one of the comparators to view the bar chart. We organize this data from highest risk factor to lowest risk factor so as to not only understand the most dangerous factors
+            but also the safest. Hover over the bars to see the category of each bar.
+          </h4>
+        </div> 
+      </div>  
 
 
       {/if}
@@ -151,8 +164,7 @@
     <App_violence />
     <div style = "height:100px"></div>
     <App_guided select_index = 0/>
-    <!-- Use the img tag and set its src attribute to the imported image -->
-    <img src={myImage} alt="My Image" style="width: 1000px; height: 1000px;">
+\
 
     <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
       &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap. They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador, (February 2020)
@@ -253,7 +265,7 @@
 
     h2 {
         font-size: 40px;
-        font-weight: 300;
+        font-weight: bold;
         line-height: 1.5;
     }
     .background {
@@ -298,5 +310,17 @@
     width: 100vw;
 
   }
+  .container {
+		
+		padding: 20px;
+		height: 100vh;
+		width: 100%;
+	}
+	
+	.text-sizing {
+		resize: both;
+		overflow: hidden;
+		margin-bottom: 1rem;
+	}
 
 </style>
