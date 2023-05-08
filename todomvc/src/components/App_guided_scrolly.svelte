@@ -6,6 +6,7 @@
     import all_violence_data from '../components/all_violence_data.json';
     import ButtonContainer from './ButtonContainer.svelte';
     import Person_cluster from './Separated_circles.svelte';
+    import Saos from 'saos';
 
     let hovered = -1;
     let hovered_1 = -1;
@@ -68,25 +69,37 @@
 
 
     <!-- <h2 style="margin-top: 5px">Are some "irregular" migrants experiencing violence at higher rates than others?</h2> -->
-
+    
+        
+    
 
     <p>{selected.text}</p>
+    <!-- <Saos animation={"from-left 2s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"}><div> -->
     <div class = "violence_grid">
+        
         <section class="humans_filter1">
             <p style = "font-style: italic">{selected.left_text}</p>
             <p style="color: #F8553D;">Rate of reported violence: {s_violence_rate_filter}</p>
+            <Saos animation={"from-left 2s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"}>
 
             <Person_cluster data_dot = {data_violence_left}/>
+             </Saos>
+            
         </section>
+        
 
+        
         <section class="humans_filter2">
             <p style = "font-style: italic">All others</p>
             <p style="color: #F8553D;">Rate of reported violence: {s_violence_rate_opp_filter}</p>
             <Person_cluster data_dot  = {data_violence_right}/>
         </section>
+        
 
 
     </div>
+    
+    <!-- </Saos> -->
     <!-- <div class = "buttons_grid">
         <section class = back_buttons>
             <ButtonContainer>
@@ -292,4 +305,13 @@
         background-color: #ECEE41;
         color: black;
     }
+    @keyframes -global-from-left {
+  0% {
+    transform: rotateX(50deg) translateX(-200vw) skewX(-50deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }}
 </style>

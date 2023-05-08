@@ -1,12 +1,12 @@
 <script>
     import Scroller from "@sveltejs/svelte-scroller";
-    import Bars from '../components/Interact_bars.svelte';
+    import Bars from '../components/Interact_bars_vertical.svelte';
     import App_violence from '../components/App_violence.svelte';
     import App_guided from '../components/App_guided_scrolly.svelte';
-    import myImage from '../Pilar.png';
     import { fit, parent_style } from '@leveluptuts/svelte-fit';
 
     let count, index, offset, progress;
+
 </script>
 
 <main>
@@ -14,12 +14,11 @@
         <h1 style="margin-top: 0px">Exploring risk factors related to violence reported by migrants whose external migration was characterized as "irregular*"</h1>
         <p style="margin-top: 50px">*here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</p>
         <h4 style ="margin-top: 100px">Scroll to continue</h4>
-        <!-- <img src={myImage} alt="My Image"> -->
         <div style = "height:500px"></div>
     </div>
     
 
-
+<div class='scroll_container'>
 <Scroller
   top={0.0}
   bottom={1}
@@ -30,29 +29,16 @@
   bind:progress
 >
   <div class="background" slot="background">
-
-    <!-- <div class="progress-bars">
-      <p>current section: <strong>{index + 1}/{count}</strong></p>
-      <progress value={count ? (index + 1) / count : 0} />
-
-      <p>offset in current section</p>
-      <progress value={offset || 0} />
-
-      <p>total progress</p>
-      <progress value={progress || 0} />
-    </div> -->
-      {#if index === 0}
+    
+      {#if progress <0.15}
+        
         <div class="container text-sizing">
           <div style={parent_style}>
+            
           <h2  style="margin-top: 5px">
           Irregular migrant vulnerablity
 
           </h2>  
-          
-            <!-- <h5 use:fit style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey. 
-            </h5> -->
-          
-
           <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey.<br> Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
 
           </p>
@@ -60,13 +46,14 @@
         </div>
 
         {/if}
+        
         {#if index === 1}
         
        
 
       {/if}
 
-      {#if index === 2}
+      {#if progress >=0.15 && progress<0.33}
         <div class="container text-sizing"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
@@ -80,7 +67,7 @@
         </div>  
       {/if} 
 
-      {#if index === 4}
+      {#if progress >=0.33 && progress <0.54}
         <div class="container text-sizing"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
@@ -94,7 +81,7 @@
         </div>
       {/if} 
 
-    {#if index === 6}
+    {#if progress >=0.54 && progress < 0.68}
       <div class="container text-sizing"> 
         <div style={parent_style}>
           <h2 style="margin-top: 5px">
@@ -109,7 +96,7 @@
     {/if} 
 
 
-    {#if index === 8}
+    {#if progress >=0.68 && progress < 0.83}
     <div class="container text-sizing"> 
       <div style={parent_style}>     
         <h2 style="margin-top: 5px">
@@ -127,7 +114,7 @@
   {/if} 
 
 
-      {#if index == 9}
+      {#if progress >= 0.83 && progress < 0.97}
       <div class="container text-sizing"> 
         <div style={parent_style}>  
           <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted.<br> Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds.
@@ -137,7 +124,7 @@
       </div>
 
         {/if}
-      {#if index > 9}
+      {#if progress >= 0.97}
       <div class="container text-sizing"> 
         <div style={parent_style}> 
           <h4 use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 50px">
@@ -155,23 +142,28 @@
   </div>
 
   <div class="foreground" slot="foreground" >
-
+    
 
 
     <h5 style="margin-top: 60px; margin-right: 20px">Data collected from approximately 5,000 household interviews and over 6,000 web survey responses across the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better understand the factors in migration. </h5>
     <p style="margin-top: 10px; margin-right: 20px; font-size: smaller; font-style: italic;">It is key to remember that this survey was conducted on migrants after their journey which means that the data we are seeing is likely subject to Survivor Bias.</p>
-
+    
     <App_violence />
-    <div style = "height:100px"></div>
+    
+    
+    <div style = "height:100px" ></div>
+    
     <App_guided select_index = 0/>
-\
+    
+    
+
 
     <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
       &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap. They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador, (February 2020)
     </h3>
     <div style = "height:100px"></div>
-
     <App_guided select_index = 1/>
+    
     
     <div style = "height:100px"></div>
 
@@ -184,15 +176,17 @@
       &ldquo; I never wanted to do this.” - Said Ana Hernández, clutching her 11-year-old's hand at a gas station - “The situation is forcing me to. You get to a point where you don't have anything to give them to eat.” (Honduras 2020)
     </h3>
     <div style = "height:100px"></div>
-
+    
 
     <App_guided select_index = 2/>
+
+
     
     <div style = "height:100px">
     </div>
-
-
+   
     <App_guided select_index = 3/>
+   
     <div style = "height:100px"></div>
     <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
       &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things, from the idea of reaching the north to being well united.” - Andrea (September 2019)
@@ -210,12 +204,13 @@
 
     </h3>
     <div style = "height:100px"></div>
-
+    
     <Bars style="margin-left: 50px"/>
     <div style = "height:100px"></div>
 
   </div>
 </Scroller>
+</div>
 </main>
 <main>
     <div class = 'bookend'>
@@ -322,5 +317,17 @@
 		overflow: hidden;
 		margin-bottom: 1rem;
 	}
+[slot="background"] {
+  pointer-events: all;
+}
+
+[slot="foreground"] {
+  pointer-events: all;
+}
+.scroll_container {
+		
+		pointer-events: none;
+	}
+
 
 </style>

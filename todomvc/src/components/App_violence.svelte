@@ -5,6 +5,7 @@
     //import violence_data from '../components/irregularviolence.json';
     //import no_violence_data from '../components/irregular_no_violence.json';
     import all_violence_data from '../components/all_violence_data.json';
+    import Saos from 'saos';
 
     let violence_data = all_violence_data.filter(all_violence_data => (all_violence_data.experienced_violence_yn==1));
     let no_violence_data = all_violence_data.filter(all_violence_data => (all_violence_data.experienced_violence_yn==0));
@@ -26,8 +27,9 @@
     <div class = "violence_grid">
         <section class="humans">
             <p>Rate of reported violence: {s_violence_rate_filter}</p>
-
+            <Saos animation={"from-left 2s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"}>
             <Person data_dot = {all_violence_data}/>
+            </Saos>
         </section>
 
 
@@ -191,4 +193,13 @@
         flex-shrink: 0;
 
         } 
+        @keyframes -global-from-left {
+  0% {
+    transform: rotateX(50deg) translateX(-200vw) skewX(-50deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }}
 </style>
