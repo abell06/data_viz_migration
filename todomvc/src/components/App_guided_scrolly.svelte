@@ -5,7 +5,7 @@
     import Dot from './new_dot.svelte';
     import all_violence_data from '../components/all_violence_data.json';
     import ButtonContainer from './ButtonContainer.svelte';
-    import Person_cluster from './Separated_circles.svelte';
+    import Person_cluster from './Separated_circles_no_tip.svelte';
     import Saos from 'saos';
 
     let hovered = -1;
@@ -194,10 +194,7 @@
         box-sizing: border-box;
     }
 
-    g:hover {
-        opacity: 0.5;
-        cursor:pointer;
-    }
+
 
 
     main {
@@ -209,6 +206,10 @@
         color: var(--color-text);
         margin-top: 0px;
     }
+    g:hover {
+        
+        cursor:auto;
+      }
 
     label,
     input,

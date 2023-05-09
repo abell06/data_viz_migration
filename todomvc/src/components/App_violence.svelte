@@ -27,6 +27,7 @@
     <div class = "violence_grid">
         <section class="humans">
             <p>Rate of reported violence: {s_violence_rate_filter}</p>
+            <p style = "font-style: italic">Hover over icons to see more detail on the types of violence individuals in this dataset experienced.</p>
             <Saos animation={"from-left 2s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"}>
             <Person data_dot = {all_violence_data}/>
             </Saos>

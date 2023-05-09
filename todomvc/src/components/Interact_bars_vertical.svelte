@@ -25,9 +25,9 @@
     let selected_violence_type = selected_violence_option.violence_type
 
     let options = [
-		{ filter: 'Compare by motivation to migrate', select_by:'mig_ext_motivo', filterFunction: (e) => {return e.motivation ===1;}, left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: 'People migrating because of deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.'},
-		{ filter: 'Compare by accompanying travelers', select_by:'mig_ext_acompany',filterFunction: (e) => {return e.acompany ===1;}, left_text: 'Migrants traveling alone'},
-        { filter: 'Compare by mode of travel', select_by:'mig_ext_medio', filterFunction: (e) => {return e.medio ===1;}, left_text: 'Migrants traveling in a caravan'},
+		{ filter: 'Compare by motivation to migrate', heading: 'Motivation to migrate', select_by:'mig_ext_motivo', filterFunction: (e) => {return e.motivation ===1;}, left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: 'People migrating because of deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.'},
+		{ filter: 'Compare by accompanying travelers', heading: 'Accompanying travelers', select_by:'mig_ext_acompany',filterFunction: (e) => {return e.acompany ===1;}, left_text: 'Migrants traveling alone'},
+        { filter: 'Compare by mode of travel', heading: 'Mode of travel', select_by:'mig_ext_medio', filterFunction: (e) => {return e.medio ===1;}, left_text: 'Migrants traveling in a caravan'},
 	];
     let selected = options[0];
 
@@ -37,7 +37,7 @@
         (p1, p2) => (p1[selected_violence_type] < p2[selected_violence_type]) ? 1 : (p1[selected_violence_type] > p2[selected_violence_type]) ? -1 : 0);
     let xVals = sorted_chart_data.map((el) => el.categories);
     let yVals = sorted_chart_data.map((el) => el[selected_violence_type]).map(Number);
-    let xTicks = xVals
+    let xTicks = xVals;
     $: {
         selected_violence_type = selected_violence_option.violence_type
         chart_data = data.filter(data => (data.select_by ==selected.select_by));
@@ -49,11 +49,14 @@
     }
 
 
-	const yTicks = [0.1,0.2,0.3,0.4,0.5,0.6]
-	const padding = { top: 20, right: 15, bottom: 20, left: 65 };
+	//const yTicks = [0.1,0.2,0.3,0.4,0.5,0.6]
+    const yTicks = [0.6,0.5,0.4,0.3,0.2,0.1]
 
-	let width = 500;
-	let height = 200;
+	const padding = { top: 20, right: 15, bottom: 20, left: 65 };
+    
+
+	let width = 700;
+	let height = 700;
 
 	function formatMobile(tick) {
 		return "'" + tick.toString().slice(-2);
@@ -80,52 +83,66 @@
 
     <div class = "buttons_grid">
         <p style="margin-top: 0px">Step 1: Filter by violence type</p>
+        <div class= "options_block">
             {#each violence_options as violence_option}
-                <label>
+                <label align="left" style = "font-size: 20px">
                     <input type=radio on:change={()=>selected_violence_option = violence_option} name="lunch" value={violence_option}>
-                    {violence_option.text}
+                    {violence_option.text}<br>
                 </label>
             {/each}
-        <p style="margin-top: 0px">Step 2: Choose comparator</p>
-            {#each options as option}
-                <label>
+        </div>
+        <p style="margin-top: 20px">Step 2: Choose comparator</p>
+        <div class= "options_block">
+            {#each options as option, i}
+                <label align="left" style = "font-size: 20px">
                     <input type=radio on:change={()=>selected = option} name="flavours" value={option}>
-                    {option.filter}
+                    {option.heading}<br>  
                 </label>
             {/each}
+        </div>
 
 
     </div>
-    <div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
-        <svg>
+    <h2>{selected_violence_option.text} x {selected.heading}</h2>
+    <div class="chart" width={width} height={height}>
+        <svg {width} {height} viewBox="1 1 {width} {height}">
             <!-- y axis -->
             <g class="axis y-axis">
-                {#each yTicks as tick}
-                    <g class="tick tick-{tick}" transform="translate(0, {yScale(tick)})">
-                        <line x2="100%"></line>
-                        <text y="-4">{tick*100}% {tick === 4 ? ' % reporting violence' : ''}</text>
+                {#each yTicks as tick,i}
+                    <g class="tick tick-{tick}" transform="translate({yScale(0)-yScale(tick)+25},0)">
+                        <line y2="85%"></line>
+                        <text y="-10">{tick*100}% {tick === 4 ? ' % reporting violence' : ''}</text>
                     </g>
                 {/each}
+                <g class="tick" >
+                <text x=250 y="-50" style="font-weight:bold">Rate of reported violence</text>
+                        
+                 </g> 
             </g>
 
-            <!-- x axis -->
+            <!-- old x axis, new y axis-->
             <g class="axis x-axis">
-                
-                    <g class="tick" >
+                {#each xVals as tick,i}
+                    <g class="tick tick-{tick}" transform="translate(0, {xScale(i)-xScale(0) + 0.5*barWidth+4})" >
+                       
+                        <text y="0">{tick} {tick === 4 ? ' % reporting violence' : ''}</text>
+                    </g>
+                {/each}
+                    <!-- <g class="tick" >
                         <text x=0 y="500">Highest rate of reported violence</text>
                         <text x=500 y="500">Lowest rate of reported violence</text>
                         <text x=65 y="15">of migrants reporting violence</text>
-                    </g>
+                    </g> -->
                 
             </g>
 
             <g class='bars'>
                 {#each yVals as pointY, i}
                     <rect
-                        x="{xScale(i) + 2}"
-                        y="{yScale(pointY)}"
-                        width="{barWidth - 4}"
-                        height="{yScale(0) - yScale(pointY)}"
+                        y="{xScale(i)-xScale(0)}"
+                        x="25"
+                        height="{barWidth - 4}"
+                        width="{yScale(0)-yScale(pointY)}"
                         on:mouseover={(event) => { hovered = i; 
                             recorded_mouse_position = {
                                         x: event.pageX,
@@ -142,7 +159,7 @@
     style="left: {recorded_mouse_position.x}px; top: {recorded_mouse_position.y-1000}px"
 >
     {#if hovered !== -1}
-        {xVals[hovered]} 
+        {Math.floor(yVals[hovered]*100)}% 
     {/if}
 </div>
 
@@ -164,7 +181,7 @@
         font-family: "Nunito", sans-serif;
         font-weight: 300;
         line-height: 2;
-        font-size: 24px;
+        font-size: 25px;
         color: var(--color-text);
         margin-top: 20px;
     }
@@ -176,6 +193,7 @@
 		width: 100%;
 		max-width: 1000px;
 		margin: 0 auto;
+        margin-top: 70px;
         overflow: visible;
 	}
 
@@ -193,8 +211,8 @@
 	}
 
 	.tick line {
-		stroke: #e2e2e2;
-		stroke-dasharray: 2;
+		stroke: #bcbbbb;
+		stroke-dasharray: 4;
 	}
 
 	.tick text {
@@ -207,8 +225,8 @@
 	}
 
 	.x-axis .tick text {
-		text-anchor: start;
-        /*transform:rotate(-25deg);*/
+		text-anchor: end;
+        transform:rotate(-0deg);
 	}
 
 	.bars rect {
@@ -269,4 +287,42 @@
 		position: absolute;
 		padding: 10px;
 	}
+
+    .options_block{
+        background-color: #bbd4bc;
+        columns: 3;
+        column-fill: balance;
+        white-space: nowrap;
+        text-align: left;
+        padding: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #F8553D;
+        
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
 </style>

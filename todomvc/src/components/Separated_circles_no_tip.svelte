@@ -21,13 +21,10 @@
     let recorded_mouse_position = {
 		x: 0, y: 0
 	};
-  function addSpace(str) {
-    return str.split('').join(' ');
-  }
 
 
     
-    const width = 800; //the margin top, bottom, left, right margin offset relative to the radius
+    const width = 700; //the margin top, bottom, left, right margin offset relative to the radius
     const padding = 3; // the all padding all around each circle, in pixels
     const margin = 1; // the all margin all around, in pixels
     const textColor = 'black'; //the color of the text
@@ -76,7 +73,7 @@
   
     let base = pack()
     .size([width - marginLeft - marginRight, height - marginTop - marginBottom])
-    .radius(d => 9)
+    .radius(d => 6)
     .padding(padding)
     (hierarchy({children: iVals})
     .sum(i => vVals[i])
@@ -152,7 +149,7 @@
     class={hovered === -1 ? "tooltip-hidden": "tooltip-visible"}	
     style="left: {recorded_mouse_position.x -200}px; top: {recorded_mouse_position.y -1500}px">
     {#if hovered !== -1}
-        Type of violence reported: {stringVals[hovered.data].join(', ')} 
+        Type of violence reported: `{stringVals[hovered.data]}` 
     {/if}
     </div>
 
@@ -206,12 +203,12 @@
         
 
         }
-
-
     g:hover {
-        opacity: 0.5;
-        cursor:pointer;
+        
+        cursor:auto;
       }
+
+
         	/* dynamic classes for the tooltip */
     .tooltip-hidden {
       visibility: hidden;
@@ -221,15 +218,10 @@
     }
 
     .tooltip-visible {
-      font: 15px sans-serif;
+        visibility: hidden;
       font-family: "Nunito", sans-serif;
-      visibility: visible;
-      background-color: #f0dba8;
-      border-radius: 10px;
       width: 200px;
-      color: black;
       position: absolute;
-      padding: 10px;
     }
 
 
