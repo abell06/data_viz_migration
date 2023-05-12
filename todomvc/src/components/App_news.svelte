@@ -11,7 +11,7 @@
 
 <main>
   <!-- entry page put picture here -->
-    <div class = 'bookend'>
+    <div class = 'bookend_image'>
       <!-- set background to picture -->
         <h1 style="margin-top: 100px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
         <h4 style="margin-top: 30px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
@@ -277,7 +277,7 @@
         line-height: 2;
         font-size: 24px;
         color: var(--color-text);
-        margin-top: 80px;
+        margin-top: 0px;
     }
     h1 {
         font-size: 52px;
@@ -334,6 +334,15 @@
     /* Add any other styles you want here */
     height : 100vh;
     width: 100vw;
+    margin-top: 0px;
+
+  }
+  .bookend_image {
+    /*background-color: aquamarine;*/
+    height : 100vh;
+    width: 100vw;
+    background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png");
+    margin-top: 0px;
 
   }
   .container {
