@@ -11,7 +11,7 @@
 
 <main>
   <!-- entry page put picture here -->
-    <div class = 'bookend'>
+    <div class = 'bookend_image'>
       <!-- set background to picture -->
         <h1 style="margin-top: 0px">Exploring risk factors related to violence reported by migrants whose external migration was characterized as "irregular*"</h1>
         <p style="margin-top: 50px">*here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</p>
@@ -253,7 +253,7 @@
         line-height: 2;
         font-size: 24px;
         color: var(--color-text);
-        margin-top: 80px;
+        margin-top: 0px;
     }
     h1 {
         font-size: 52px;
@@ -308,6 +308,15 @@
     /*background-color: aquamarine;*/
     height : 100vh;
     width: 100vw;
+    margin-top: 0px;
+
+  }
+  .bookend_image {
+    /*background-color: aquamarine;*/
+    height : 100vh;
+    width: 100vw;
+    background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png");
+    margin-top: 0px;
 
   }
   .container {
