@@ -10,13 +10,16 @@
 </script>
 
 <main>
+  <!-- entry page put picture here -->
     <div class = 'bookend'>
+      <!-- set background to picture -->
         <h1 style="margin-top: 0px">Exploring risk factors related to violence reported by migrants whose external migration was characterized as "irregular*"</h1>
         <p style="margin-top: 50px">*here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</p>
         <h4 style ="margin-top: 100px">Scroll to continue</h4>
         <div style = "height:500px"></div>
     </div>
     
+<!-- another bookend to add map-->
 
 <div class='scroll_container'>
 <Scroller
@@ -263,6 +266,7 @@
         font-weight: bold;
         line-height: 1.5;
     }
+    /* change width and margin for sidebar*/
     .background {
     width: 25%;
     margin-left: 75%;
@@ -272,6 +276,7 @@
     background-color: #dcdada;
     /*padding: 0 0 50% 0;*/
   }
+  /* for circles size */
   .foreground {
     width: 75%;
     margin: 0 auto;
