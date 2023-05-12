@@ -13,9 +13,19 @@
   <!-- entry page put picture here -->
     <div class = 'bookend'>
       <!-- set background to picture -->
-        <h1 style="margin-top: 0px">Exploring risk factors related to violence reported by migrants whose external migration was characterized as "irregular*"</h1>
-        <p style="margin-top: 50px">*here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</p>
-        <h4 style ="margin-top: 100px">Scroll to continue</h4>
+        <h1 style="margin-top: 100px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+        <h4 style="margin-top: 30px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
+          We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
+          compare to reporting by news outlets to understand the strenghts and limitations of the data.
+        </h4>
+        <p style="margin-top: 30px">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
+          the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better 
+          understand the factors in migration.
+        </p>
+        <h4 style="margin-top: 30px">It is key to remember that this survey was conducted on migrants after their journey which means that 
+          the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>. 
+        </h4>   
+         <h4 style ="margin-top: 100px">Scroll to continue</h4>
         <div style = "height:500px"></div>
     </div>
     
@@ -39,7 +49,7 @@
           <div style={parent_style}>
             
           <h2  style="margin-top: 5px">
-          Irregular migrant vulnerablity
+          Irregular migrant experience violence at an alarmingly high rate
 
           </h2>  
           <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey.<br> Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
@@ -216,11 +226,25 @@
 </div>
 </main>
 <main>
-    <div class = 'bookend'>
+    <div class = 'bookend' >
         <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
-        <h4 style="margin-top: 50px">Our goal is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.</h4>
-        <h3 style="margin-top: 50px">We aim to shed light on the most vulnerable forms of travel in a way that is understandable to the general public. If you have been moved by these data points and stories,  <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.</h3>
-        <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.</h3>
+        <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
+          We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
+          Trump administration during the COVID pandemic, has been used to expel migrants from the United States without due process.
+        </h3>
+        
+        <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
+          We also hope to provide a resource for journalists and researchers who are interested in this topic
+        </h3>
+        <h3 style="margin-top: 50px">
+          If you have been moved by these data points and stories,  
+           <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
+        </h3>
+        <h4 style="margin-top: 50px">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
+          Overall, we believe that we have unconvered significant weaknesses and biases hidden in the data, particularly when it comes to violence as it relates to gender differences where the data
+          and the reporting diverge significantly. We highlight this issue because we believe that it is very important to not always relay on data to tell the whole story.
+        </h4> 
+
         
     </div>
     
@@ -228,7 +252,7 @@
 </main>
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
     :root {
         --color-bg: #ffffff;
@@ -268,8 +292,8 @@
     }
     /* change width and margin for sidebar*/
     .background {
-    width: 25%;
-    margin-left: 75%;
+    width: 30%;
+    margin-left: 70%;
     height: 100vh;
     position: relative;
     /* outline: green solid 3px; */
@@ -278,7 +302,7 @@
   }
   /* for circles size */
   .foreground {
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
     margin-left: 0%;
     height: auto;
@@ -306,6 +330,8 @@
 
   .bookend {
     /*background-color: aquamarine;*/
+    padding: 0 6.0%;
+    /* Add any other styles you want here */
     height : 100vh;
     width: 100vw;
 
