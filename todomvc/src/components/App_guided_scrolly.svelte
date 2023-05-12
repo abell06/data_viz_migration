@@ -92,7 +92,9 @@
         <section class="humans_filter2">
             <p style = "font-style: italic">All others</p>
             <p style="color: #F8553D;">Rate of reported violence: {s_violence_rate_opp_filter}</p>
-            <Person_cluster data_dot  = {data_violence_right}/>
+            <Saos animation={"slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both"}>
+                <Person_cluster data_dot  = {data_violence_right}/>
+            </Saos>
         </section>
         
 
@@ -313,6 +315,15 @@
   }
   100% {
     transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }}
+  @keyframes -global-slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
     opacity: 1;
   }}
 </style>
