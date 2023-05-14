@@ -259,7 +259,7 @@
 </main>
 <main>
     <div class = 'bookend' >
-        <h4 style="margin-top: 200px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+      <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
         <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
           We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
           Trump administration during the COVID pandemic and has been used to expel migrants from the United States without due process, is set to expire.
