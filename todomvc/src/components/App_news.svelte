@@ -45,7 +45,7 @@
     
       {#if progress <0.15}
         
-        <div class="container text-sizing" 
+        <div class="container text-sizing transition-class" 
           style="background-color: #9d87ba;">
           <div style={parent_style}>
             
@@ -67,8 +67,8 @@
 
       {/if}
 
-      {#if progress >=0.15 && progress<0.33}
-        <div class="container text-sizing"
+      {#if progress >=0.15 && progress<0.30}
+        <div class="container text-sizing transition-class" 
           style="background-color: #eadc41;"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
@@ -82,8 +82,8 @@
         </div>  
       {/if} 
 
-      {#if progress >=0.33 && progress <0.54}
-        <div class="container text-sizing"
+      {#if progress >=0.30 && progress <0.50}
+        <div class="container text-sizing transition-class" 
         style="background-color: #20a8b0;"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
@@ -97,7 +97,7 @@
         </div>
       {/if} 
 
-    {#if progress >=0.54 && progress < 0.68}
+    {#if progress >=0.50 && progress < 0.63}
       <div class="container text-sizing"
         style="background-color: #e56147;">
         <div style={parent_style}>
@@ -113,7 +113,7 @@
     {/if} 
 
 
-    {#if progress >=0.68 && progress < 0.83}
+    {#if progress >=0.63 && progress < 0.80}
     <div class="container text-sizing"
      style="background-color: #d34188;">
       <div style={parent_style}>     
@@ -132,7 +132,7 @@
   {/if} 
 
 
-      {#if progress >= 0.83 && progress < 0.97}
+      {#if progress >= 0.80 && progress < 0.90}
       <div class="container text-sizing"
          style="background-color: #d34188;">
         <div style={parent_style}>  
@@ -143,7 +143,7 @@
       </div>
 
         {/if}
-      {#if progress >= 0.97}
+      {#if progress >= 0.90}
       <div class="container text-sizing"> 
         <div style={parent_style}> 
           <h4 use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 50px">
@@ -391,6 +391,7 @@
 		padding: 20px;
 		height: 100vh;
 		width: 100%;
+    transition: background-color 4s ease;
 	}
 	
 	.text-sizing {
