@@ -12,13 +12,15 @@
 
 <main>
   <!-- entry page put picture here -->
-    <div class='bookend_image' style="background-color: #9d87ba;">
+    <div class='bookend_image' style="background-color: #9d87ba; display: flex; align-items: center; justify-content: center; flex-direction: column; height: 100vh;">
       <!-- set background to picture -->
 <!-- <<<<<<< lan/add-map -->
-        <h1 style="margin-top: 100px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+       <!-- <h1 style="margin-top: 100px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+        -->
 <!-- ======= -->
-      <div class="text-background">
-        <h1 style="margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+      <div class="text-background" style="text-align: center;">
+        <h1 style="margin-top: 100px: margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+        <h4 style ="margin-top: 100px"><em>Scroll to continue</em></h4>
 <!--         <h4 style="margin-top: 30px">In this webpage, we highlight the often violent journey that irregular Central American migrants take to reach the US. 
           We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
           compare to reporting by news outlets to understand the strenghts and limitations of the data.
@@ -50,7 +52,7 @@
         the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>. 
         <!-- <div style = "height:500px"></div> -->
       <Map />   
-      <h4 style ="margin-top: 100px">Scroll to continue</h4>
+      
       <!-- <div style = "height:500px"></div> -->
     </div>
 
@@ -281,6 +283,9 @@
 </main>
 <main>
     <div class = 'bookend' >
+      <h4 style="margin-top: 0px; color: #dddada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+        
+      
       <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
         <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
           We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
