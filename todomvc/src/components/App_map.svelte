@@ -1,66 +1,24 @@
-<!-- <script>
-    import Polygon from '../assets/cty_bnd.svelte';
-</script> -->
-
-<!-- <main>
-    <Polygon/>
-</main> -->
-<!--   
-<main>
-    <Polygon>
-      <text x="50" y="25" class="number">1</text>
-      <text x="85" y="50" class="number">2</text>
-      <text x="50" y="75" class="number">3</text>
-      <text x="15" y="50" class="number">4</text>
-    </Polygon>
-  </main>
-  
-  <style>
-    .polygon {
-      fill: blue;
-      stroke: black;
-      stroke-width: 2;
-      z-index: 1; /* Set a higher z-index for the Polygon */
-    }
-    
-    .number {
-      fill: white;
-      font-size: 10px;
-      font-weight: bold;
-      text-anchor: middle;
-      z-index: 2; /* Set a higher z-index for the numbers */
-    }
-  </style> -->
-  
-  <script>
-    import Polygon from '../assets/cty_bnd.svelte';
-  
-    const data = [
-      { id: '01', x: 100, y: 100 },
-      { id: '02', x: 200, y: 200 },
-      { id: '03', x: 300, y: 300 }
-    ];
+<script>
+    import Polygon from '../assets/map_annotated.svelte';
   </script>
   
   <main>
-    <svg viewBox="0 0 800 600">
-      <Polygon />
-  
-      {#each data as item}
-        <text
-          x={item.x}
-          y={item.y}
-          font-size="20"
-          font-weight="bold"
-          text-anchor="middle"
-          alignment-baseline="middle"
-        >
-          {item.id}
-        </text>
-      {/each}
-    </svg>
+      <Polygon/>
   </main>
 
+  <!-- <style>
+    .borders {
+      position: absolute;
+      outline: 3px solid green;
+    }
+
+    .text {
+      position: relative;
+      outline: 3px solid magenta;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style> -->
 <!-- <style>
     @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
 
