@@ -175,7 +175,7 @@
     }
     main {
         text-align: center;
-        font-family: "Nunito", sans-serif;
+        font-family: Georgia;
         font-weight: 300;
         line-height: 2;
         font-size: 24px;
@@ -267,14 +267,14 @@
         	/* dynamic classes for the tooltip */
 	.tooltip-hidden {
 		visibility: hidden;
-		font-family: "Nunito", sans-serif;
+		font-family: Georgia;
 		width: 200px;
 		position: absolute;
 	}
 
 	.tooltip-visible {
 		font: 15px sans-serif;
-		font-family: "Nunito", sans-serif;
+		font-family: Georgia;
 		visibility: visible;
 		background-color: #f0dba8;
 		border-radius: 10px;

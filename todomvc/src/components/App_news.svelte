@@ -287,7 +287,7 @@
     }
     main {
         text-align: center;
-        font-family: "Nunito", sans-serif;
+        font-family: "Georgia";
         font-weight: 300;
         line-height: 2;
         font-size: 24px;
@@ -363,8 +363,7 @@
     content: close-quote;
   }
   */
-
-
+  
   .bookend {
     /*background-color: aquamarine;*/
     padding: 0 10.0%;
