@@ -70,7 +70,7 @@
 
       {/if}
 
-      {#if progress >=0.13 && progress<0.30}
+      {#if progress >=0.13 && progress<0.28}
         <div class="container text-sizing transition-class" 
           style="background-color: #eadc41;"> 
           <div style={parent_style}>
@@ -81,13 +81,13 @@
 
             <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;"> According to the survey, women (20%) were less likely to suffer from violence than men (27%).
               However, <strong>this statistic does not align with other studies, which report that 80% of women experience rape and sexual assault during migration [source].</strong> 
-              The discrepancy may be due to the survey data being collected from the migrants' family members. The women migrants report feeling deep shame and trauma about the experience and may not want to share it with their family members back home.
+              The discrepancy may be due to the survey data being collected from the migrant's family members. The victims have reported feeling shame and trauma about the experience and may not want to share it with their family members back home.
             </p>
           </div> 
         </div>  
       {/if} 
 
-      {#if progress >=0.30 && progress <0.54}
+      {#if progress >=0.28 && progress <0.54}
         <div class="container text-sizing transition-class" 
         style="background-color: #20a8b0;"> 
           <div style={parent_style}>
@@ -96,7 +96,11 @@
 
             </h2>
 
-            <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"><strong>Natural hazards are increasingly becoming a motive for migration from central America.</strong><br>  In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy.   [source] Many decided to migrate at that exact moment. The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors.
+            <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"><strong>Natural hazards are increasingly becoming a motive for migration from central America.</strong><br>  
+              In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. 
+              This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy. [source]
+               Many decided to migrate at that exact moment. 
+               <strong>The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors.</strong>
             </p>
           </div> 
         </div>
@@ -127,7 +131,7 @@
         </h2>
 
         <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"> <strong>Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children.</strong><br>
-           The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. The reality was far from this. <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable.</strong>
+           The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. The reality was far from this. <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who are particularly vulnerable during the journey.</strong>
         </p>
       </div> 
     </div>
@@ -258,7 +262,7 @@
         <h4 style="margin-top: 200px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
         <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
           We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
-          Trump administration during the COVID pandemic, has been used to expel migrants from the United States without due process.
+          Trump administration during the COVID pandemic and has been used to expel migrants from the United States without due process, is set to expire.
         </h3>
         
         <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
@@ -283,10 +287,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
     :root {
-        --color-bg: #ffffff;
+        --color-bg: #1c3441;
         --color-outline: #c2c2c2;
         --color-shadow: hsl(0, 0%, 0%, 0.1);
-        --color-text: #3f4252;
+        --color-text: #fffff;
         --color-bg-1: hsla(0, 0%, 0%, 0.2);
         --color-shadow-1: hsl(0, 0%, 96%);
     }
@@ -306,6 +310,7 @@
         font-size: 24px;
         color: var(--color-text);
         margin-top: 0px;
+        background-color:  #dddada; /* 20% opaque */
     }
     h1 {
         font-size: 52px;
@@ -320,8 +325,8 @@
     }
     /* change width and margin for sidebar*/
     .background {
-    width: 30%;
-    margin-left: 70%;
+    width: 35%;
+    margin-left: 65%;
     height: 100vh;
     position: relative;
     /* outline: green solid 3px; */
@@ -330,7 +335,7 @@
   }
   /* for circles size */
   .foreground {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     margin-left: 0%;
     height: auto;
@@ -362,9 +367,9 @@
     padding-right: 30px;
     font-style: italic;
     font-weight: normal;  /* set font-weight to normal to prevent boldening */
-    font-size: 20px;  /* set font-size to a smaller value */
+    font-size: 19px;  /* set font-size to a smaller value */
     /*border-left: 5px solid rgb(216, 27, 213);*/
-    color: #1c3441;
+    color: #122028;
     background-color: #a04c0c;
     border-radius: 10px; /* adjust this value as needed */
 }
