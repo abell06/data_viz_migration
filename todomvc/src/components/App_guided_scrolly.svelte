@@ -73,7 +73,7 @@
         
     
 
-    <p>{selected.text}</p>
+    <p class="bold-font">{selected.text}</p>
     <!-- <Saos animation={"from-left 2s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"}><div> -->
     <div class = "violence_grid">
         
@@ -197,11 +197,17 @@
     }
 
 
+    .bold-font {
+    font-weight: bold;
+    font-size: 28px; /* adjust size as needed */
+    padding-top: 120px; /* adjust padding size as needed */
+    padding-bottom: 20px; /* adjust padding size as needed */
+    }
 
 
     main {
         text-align: center;
-        font-family: "Nunito", sans-serif;
+        font-family: Georgia;
         font-weight: 300;
         line-height: 2;
         font-size: 24px;

@@ -14,7 +14,7 @@
     <div class='bookend_image' style="background-color: #9d87ba;">
       <!-- set background to picture -->
       <div class="text-background">
-        <h1 style="margin-top: 1px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+        <h1 style="margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
         <h4 style="margin-top: 30px">In this webpage, we highlight the often violent journey that irregular Central American migrants take to reach the US. 
           We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
           compare to reporting by news outlets to understand the strenghts and limitations of the data.
@@ -27,7 +27,7 @@
           the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>. 
         </h4>
       </div>
-         <h4 style ="margin-top: 50px">Scroll to continue</h4>
+       <h3 style="margin-top: 50px; color:  rgba(255, 255, 255); font-style: italic;"><strong>Scroll to continue</strong></h3>
         <div style = "height:50px"></div>
     </div>
     
@@ -45,7 +45,7 @@
 >
   <div class="background" slot="background">
     
-      {#if progress <0.10}
+      {#if progress <0.13}
         
         <div class="container text-sizing transition-class" 
           style="background-color: #9d87ba;">
@@ -55,7 +55,8 @@
           Irregular migrant experience violence at an alarmingly high rate
 
           </h2>  
-          <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about <strong>1 in 4 out of the 1268 reported irregular migrants surveyed suffer some form of violence during their journey.</strong><br> Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
+          <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about <strong>1 in 4 out of the 1268 reported irregular migrants surveyed suffer some form of violence during their journey.</strong><br> 
+            <em>Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</em>
           </p>
           
         </div>
@@ -69,7 +70,7 @@
 
       {/if}
 
-      {#if progress >=0.10 && progress<0.30}
+      {#if progress >=0.13 && progress<0.30}
         <div class="container text-sizing transition-class" 
           style="background-color: #eadc41;"> 
           <div style={parent_style}>
@@ -78,13 +79,15 @@
 
             </h2>
 
-            <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;">According to the survey, women (20%) were less likely to suffer from violence than men (27%). <strong>This stat does not reflect however other studies that report that 80% of women experience rape and sexual assault during migration[source].</strong><br>  This may be due to the fact that the survey is collected from the family members of the migrants who are ashamed of the traumatic experience and decide not to share it with their family members back home.
+            <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;"> According to the survey, women (20%) were less likely to suffer from violence than men (27%).
+              However, <strong>this statistic does not align with other studies, which report that 80% of women experience rape and sexual assault during migration [source].</strong> 
+              The discrepancy may be due to the survey data being collected from the migrants' family members. The women migrants report feeling deep shame and trauma about the experience and may not want to share it with their family members back home.
             </p>
           </div> 
         </div>  
       {/if} 
 
-      {#if progress >=0.30 && progress <0.50}
+      {#if progress >=0.30 && progress <0.54}
         <div class="container text-sizing transition-class" 
         style="background-color: #20a8b0;"> 
           <div style={parent_style}>
@@ -99,7 +102,7 @@
         </div>
       {/if} 
 
-    {#if progress >=0.50 && progress < 0.63}
+    {#if progress >=0.54 && progress < 0.68}
       <div class="container text-sizing"
         style="background-color: #e56147;">
         <div style={parent_style}>
@@ -115,7 +118,7 @@
     {/if} 
 
 
-    {#if progress >=0.63 && progress < 0.80}
+    {#if progress >=0.68 && progress < 0.80}
     <div class="container text-sizing"
      style="background-color: #d34188;">
       <div style={parent_style}>     
@@ -123,7 +126,8 @@
           Migration method of travel 
         </h2>
 
-        <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children. The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. <br> The reality was far from this. <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable.</strong>
+        <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"> <strong>Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children.</strong><br>
+           The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. The reality was far from this. <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable.</strong>
         </p>
       </div> 
     </div>
@@ -134,7 +138,7 @@
   {/if} 
 
 
-      {#if progress >= 0.80 && progress < 0.90}
+      {#if progress >= 0.80 && progress < 0.91}
       <div class="container text-sizing"
          style="background-color: #d34188;">
         <div style={parent_style}>  
@@ -145,10 +149,10 @@
       </div>
 
         {/if}
-      {#if progress >= 0.90}
-      <div class="container text-sizing"> 
+      {#if progress >= 0.91}
+      <div class="container text-sizing" style="background-color:#bbd4bc"> 
         <div style={parent_style}> 
-          <h4 use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 50px">
+          <h4 use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 50px;">
             In this section we allow the user to interact with the data by reviewing the different risk factors and how they relate to each other across different travel conditions. Please select one 
             of the violence type and one of the comparators to view the bar chart. We organize this data from highest risk factor to lowest risk factor so as to not only understand the most dangerous factors
             but also the safest. Hover over the bars to see the category of each bar.
@@ -173,73 +177,74 @@
     <App_violence />
     
     
-    <div style = "height:100px" ></div>
+    <div style = "height:10px" ></div>
     
     <App_guided select_index = 0/>
     
     
-    <div style = "height:100px"></div>
-    <div class='quote'>
+    <div style = "height:10px"></div>
+    <div class='quote' style="background-color: rgba(234, 220, 32, 0.5);">
       <h3>
         &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap. They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador, (February 2020)
       </h3>  
     </div>
 
 
-    <div style = "height:100px"></div>
+    <div style = "height:10px"></div>
     <App_guided select_index = 1/>
     
     
-    <div style = "height:100px"></div>
+    <div style = "height:10px"></div>
 
-    <div class='quote'>
+    <div class='quote' style="background-color: rgba(32, 168, 176, 0.5);">
       <h3>
         &ldquo; We are doomed here. The desperation, the sadness, that's what makes you migrate." - Magdalena Flores (Honduras 2020)
      </h3>  
     </div>
 
-    <div class='quote'>
+    <div class='quote' style="background-color: rgba(32, 168, 176, 0.5);">
       <h3>
         &ldquo; I never wanted to do this.” - Said Ana Hernández, clutching her 11-year-old's hand at a gas station - “The situation is forcing me to. You get to a point where you don't have anything to give them to eat.” (Honduras 2020)
      </h3>  
     </div>
 
-    <div style = "height:100px"></div>
+    <div style = "height:10px"></div>
     
 
     <App_guided select_index = 2/>
 
 
     
-    <div style = "height:100px">
+    <div style = "height:10px">
     </div>
    
     <App_guided select_index = 3/>
    
-    <div style = "height:100px"></div>
-    <div class='quote'>
+    <div style = "height:10px"></div> 
+    <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
       <h3>
         &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things, from the idea of reaching the north to being well united.” - Andrea (September 2019)
       </h3>  
     </div>
 
-    <div style = "height:100px"></div>
-    <div class='quote'>
+    <div style = "height:10px"></div>
+    <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
+
       <h3>
         &ldquo; It hasn't been easy to come in the caravan because everything is difficult. Contrary to what I thought, there aren't many facilities, and it takes a lot of effort to come in the caravan. You have to walk a lot, rest little, and even when you rest, you're always taking care of yourself. There's a lack of trust with those you come with because not everyone knows each other. There are many problems, and the journey in the caravan is not safe.” - Alicia (September 2019)
       </h3>  
     </div>
     
-    <div style = "height:100px"></div>
+    <div style = "height:10px"></div>
 
-    <div class='quote'>
+    <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
       <h3>
         &ldquo; In the end, there were so many of us, it was scary. When my wife went to the bathroom, someone touched her inappropriately, but she didn't tell me out of fear until the next day. There was nothing I could do.” - Rodrigo (2020)
 
       </h3>  
     </div>
 
-    <div style = "height:100px"></div>
+    <div style = "height:10px"></div>
     
     <Bars style="margin-left: 50px"/>
     <div style = "height:100px"></div>
@@ -352,15 +357,18 @@
   }
 
   .quote {
-    margin: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-style: italic;
+    font-weight: normal;  /* set font-weight to normal to prevent boldening */
+    font-size: 20px;  /* set font-size to a smaller value */
     /*border-left: 5px solid rgb(216, 27, 213);*/
     color: #1c3441;
     background-color: #a04c0c;
     border-radius: 10px; /* adjust this value as needed */
-  }
+}
+
 
   /*
  .quote::before {
@@ -418,7 +426,7 @@ body {
 }
 
 .text-background {
-    background-color: rgba(255, 255, 255, 0.6); /* white background with 60% opacity */
+    background-color: rgba(255, 255, 255, 0.8); /* white background with 60% opacity */
     padding: 20px;
     border-radius: 10px; /* optional, for rounded corners */
     max-width: 80%; /* optional, to limit the width of the text block */
