@@ -4,6 +4,7 @@
     import App_violence from '../components/App_violence.svelte';
     import App_guided from '../components/App_guided_scrolly.svelte';
     import { fit, parent_style } from '@leveluptuts/svelte-fit';
+    import Map from '../components/App_map.svelte'
 
     let count, index, offset, progress;
 
@@ -14,22 +15,26 @@
     <div class = 'bookend_image'>
       <!-- set background to picture -->
         <h1 style="margin-top: 100px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
-        <h4 style="margin-top: 30px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
-          We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
-          compare to reporting by news outlets to understand the strenghts and limitations of the data.
-        </h4>
-        <p style="margin-top: 30px">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
-          the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better 
-          understand the factors in migration.
-        </p>
-        <h4 style="margin-top: 30px">It is key to remember that this survey was conducted on migrants after their journey which means that 
-          the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>. 
-        </h4>   
-         <h4 style ="margin-top: 100px">Scroll to continue</h4>
-        <div style = "height:500px"></div>
     </div>
-    
-<!-- another bookend to add map-->
+
+    <!-- moved intro text to map page -->
+    <div class = 'map'>
+      <h4 style="margin-top: 30px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
+        We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
+        compare to reporting by news outlets to understand the strenghts and limitations of the data.
+      </h4>
+      <p style="margin-top: 30px">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
+        the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better 
+        understand the factors in migration.
+      </p>
+      <h4 style="margin-top: 30px">It is key to remember that this survey was conducted on migrants after their journey which means that 
+        the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>. 
+        <!-- <div style = "height:500px"></div> -->
+      <Map />   
+      <h4 style ="margin-top: 100px">Scroll to continue</h4>
+      <!-- <div style = "height:500px"></div> -->
+    </div>
+
 
 <div class='scroll_container'>
 <Scroller
