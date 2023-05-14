@@ -26,7 +26,7 @@
     let selected_violence_type = selected_violence_option.violence_type
 
     let options = [
-		{ filter: 'Compare by motivation to migrate', select_by:'mig_ext_motivo', filterFunction: (e) => {return e.motivation ===1;}, left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: 'People migrating because of deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.'},
+		{ filter: 'Compare by motivation to migrate', select_by:'mig_ext_motivo', filterFunction: (e) => {return e.motivation ===1;}, left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: ' (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.'},
 		{ filter: 'Compare by accompanying travelers', select_by:'mig_ext_acompany',filterFunction: (e) => {return e.acompany ===1;}, left_text: 'Migrants traveling alone'},
         { filter: 'Compare by mode of travel', select_by:'mig_ext_medio', filterFunction: (e) => {return e.medio ===1;}, left_text: 'Migrants traveling in a caravan'},
 	];
@@ -175,7 +175,7 @@
     }
     main {
         text-align: center;
-        font-family: "Nunito", sans-serif;
+        font-family: Georgia;
         font-weight: 300;
         line-height: 2;
         font-size: 24px;
@@ -267,14 +267,14 @@
         	/* dynamic classes for the tooltip */
 	.tooltip-hidden {
 		visibility: hidden;
-		font-family: "Nunito", sans-serif;
+		font-family: Georgia;
 		width: 200px;
 		position: absolute;
 	}
 
 	.tooltip-visible {
 		font: 15px sans-serif;
-		font-family: "Nunito", sans-serif;
+		font-family: Georgia;
 		visibility: visible;
 		background-color: #f0dba8;
 		border-radius: 10px;

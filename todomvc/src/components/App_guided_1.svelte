@@ -69,7 +69,7 @@
     <h2 style="margin-top: 5px">Are some "irregular" migrants experiencing violence at higher rates than others?</h2>
 
 
-    <p>{selected.text}</p>
+    <p class="bold-font">{selected.text}</p>
     <div class = "violence_grid">
         <section class="humans_filter1">
             <p style = "font-style: italic">{selected.left_text}</p>
@@ -187,7 +187,7 @@
 
     main {
         text-align: center;
-        font-family: "Nunito", sans-serif;
+        font-family: Georgia;
         font-weight: 300;
         line-height: 2;
         font-size: 24px;
@@ -290,4 +290,10 @@
         background-color: #ECEE41;
         color: black;
     }
+
+    .bold-font {
+    font-weight: bold;
+    font-size: 20px; /* adjust size as needed */
+    }
+
 </style>

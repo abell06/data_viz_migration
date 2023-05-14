@@ -20,7 +20,7 @@
 <style>
     main {
         text-align: center;
-        font-family: "Nunito", sans-serif;
+        font-family: Georgia;
         font-weight: 300;
         line-height: 2;
         font-size: 24px;

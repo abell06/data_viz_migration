@@ -18,7 +18,7 @@
 		{ filter: 'Sort by gender', filterFunction: (e) => {return e.mig_ext_sex ===1;}, left_text: 'Female migrants', text: 'Female migrants in the data were less likely to report violence.'},
 		{ filter: 'Sort by motivation to migrate', filterFunction: (e) => {return e.motivation ===1;}, left_text: 'Migrants motivated by deteriorating livelihoods from natural hazards', text: 'People migrating because of deterioration of livelihoods due to natural hazards (floods, droughts, volcanic eruptions, hurricanes, plagues, etc.) were more likely to experience violence than those migrating for other reasons.'},
 		{ filter: 'Sort by accompanying travelers', filterFunction: (e) => {return e.acompany ===1;}, left_text: 'Migrants traveling alone', text: 'Migrants traveling alone had higher rates of reported violence.'},
-        { filter: 'Sort by mode of travel', filterFunction: (e) => {return e.medio ===1;}, left_text: 'Migrants traveling in a caravan', text: 'Migrants traveling in a caravan reported higher rates of violence than migrants traveling with a cayote or through their own method.'},
+        { filter: 'Sort by mode of travel', filterFunction: (e) => {return e.medio ===1;}, left_text: 'Migrants traveling in a caravan', text: 'Migrants traveling in a caravan reported higher rates of violence than migrants traveling with a coyote or through their own method.'},
 	];
     export let select_index =0;
     //let select_index = 0
@@ -73,7 +73,7 @@
         
     
 
-    <p>{selected.text}</p>
+    <p class="bold-font">{selected.text}</p>
     <!-- <Saos animation={"from-left 2s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"}><div> -->
     <div class = "violence_grid">
         
@@ -197,11 +197,17 @@
     }
 
 
+    .bold-font {
+    font-weight: bold;
+    font-size: 28px; /* adjust size as needed */
+    padding-top: 120px; /* adjust padding size as needed */
+    padding-bottom: 20px; /* adjust padding size as needed */
+    }
 
 
     main {
         text-align: center;
-        font-family: "Nunito", sans-serif;
+        font-family: Georgia;
         font-weight: 300;
         line-height: 2;
         font-size: 24px;
