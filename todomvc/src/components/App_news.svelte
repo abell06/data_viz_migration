@@ -11,18 +11,18 @@
 
 <main>
   <!-- entry page put picture here -->
-    <div class = 'bookend_image'>
+    <div class = 'bookend_image' >
       <!-- set background to picture -->
-        <h1 style="margin-top: 100px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
-        <h4 style="margin-top: 30px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
+        <h1 style="margin-top: 1px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+        <h4 style="margin-top: 100px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
           We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
           compare to reporting by news outlets to understand the strenghts and limitations of the data.
         </h4>
-        <p style="margin-top: 30px">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
+        <p style="margin-top: 100px">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
           the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better 
           understand the factors in migration.
         </p>
-        <h4 style="margin-top: 30px">It is key to remember that this survey was conducted on migrants after their journey which means that 
+        <h4 style="margin-top: 100px">It is key to remember that this survey was conducted on migrants after their journey which means that 
           the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>. 
         </h4>   
          <h4 style ="margin-top: 100px">Scroll to continue</h4>
@@ -157,10 +157,11 @@
   <div class="foreground" slot="foreground" >
     
 
-
+    <!--
     <h5 style="margin-top: 60px; margin-right: 20px">Data collected from approximately 5,000 household interviews and over 6,000 web survey responses across the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better understand the factors in migration. </h5>
     <p style="margin-top: 10px; margin-right: 20px; font-size: smaller; font-style: italic;">It is key to remember that this survey was conducted on migrants after their journey which means that the data we are seeing is likely subject to Survivor Bias.</p>
-    
+    -->
+
     <App_violence />
     
     
@@ -227,7 +228,7 @@
 </main>
 <main>
     <div class = 'bookend' >
-        <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+        <h4 style="margin-top: 200px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
         <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
           We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
           Trump administration during the COVID pandemic, has been used to expel migrants from the United States without due process.
@@ -240,7 +241,7 @@
           If you have been moved by these data points and stories,  
            <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
         </h3>
-        <h4 style="margin-top: 50px">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
+        <h4 style="margin-top: 50px;">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
           Overall, we believe that we have unconvered significant weaknesses and biases hidden in the data, particularly when it comes to violence as it relates to gender differences where the data
           and the reporting diverge significantly. We highlight this issue because we believe that it is very important to not always relay on data to tell the whole story.
         </h4> 
@@ -330,7 +331,7 @@
 
   .bookend {
     /*background-color: aquamarine;*/
-    padding: 0 6.0%;
+    padding: 0 10.0%;
     /* Add any other styles you want here */
     height : 100vh;
     width: 100vw;
