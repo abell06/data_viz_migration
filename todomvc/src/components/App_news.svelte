@@ -45,16 +45,17 @@
     
       {#if progress <0.15}
         
-        <div class="container text-sizing">
+        <div class="container text-sizing" 
+          style="background-color: #9d87ba;">
           <div style={parent_style}>
             
           <h2  style="margin-top: 5px">
           Irregular migrant experience violence at an alarmingly high rate
 
           </h2>  
-          <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about 1 in 4 out of the 149 irregular migrants surveyed suffer some form of violence during their journey.<br> Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
-
+          <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about <strong>1 in 4 out of the 1268 reported irregular migrants surveyed suffer some form of violence during their journey.</strong><br> Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.
           </p>
+          
         </div>
         </div>
 
@@ -67,7 +68,8 @@
       {/if}
 
       {#if progress >=0.15 && progress<0.33}
-        <div class="container text-sizing"> 
+        <div class="container text-sizing"
+          style="background-color: #eadc41;"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
               Gender vulnerablity
@@ -81,7 +83,8 @@
       {/if} 
 
       {#if progress >=0.33 && progress <0.54}
-        <div class="container text-sizing"> 
+        <div class="container text-sizing"
+        style="background-color: #20a8b0;"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
               Migration motives
@@ -95,7 +98,8 @@
       {/if} 
 
     {#if progress >=0.54 && progress < 0.68}
-      <div class="container text-sizing"> 
+      <div class="container text-sizing"
+        style="background-color: #e56147;">
         <div style={parent_style}>
           <h2 style="margin-top: 5px">
             Migration companion 
@@ -110,7 +114,8 @@
 
 
     {#if progress >=0.68 && progress < 0.83}
-    <div class="container text-sizing"> 
+    <div class="container text-sizing"
+     style="background-color: #d34188;">
       <div style={parent_style}>     
         <h2 style="margin-top: 5px">
           Migration method of travel 
@@ -128,7 +133,8 @@
 
 
       {#if progress >= 0.83 && progress < 0.97}
-      <div class="container text-sizing"> 
+      <div class="container text-sizing"
+         style="background-color: #d34188;">
         <div style={parent_style}>  
           <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted.<br> Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds.
       
@@ -403,6 +409,10 @@
 		
 		pointer-events: none;
 	}
+
+body {
+    font-family: "Georgia", serif;
+}
 
 
 </style>
