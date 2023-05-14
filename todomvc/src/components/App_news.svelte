@@ -11,22 +11,24 @@
 
 <main>
   <!-- entry page put picture here -->
-    <div class='bookend_image'>
+    <div class='bookend_image' style="background-color: #9d87ba;">
       <!-- set background to picture -->
+      <div class="text-background">
         <h1 style="margin-top: 1px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
-        <h4 style="margin-top: 100px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
+        <h4 style="margin-top: 30px">In this webpage, we highlight the often violent journey that irregular Central American migrants take to reach the US. 
           We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
           compare to reporting by news outlets to understand the strenghts and limitations of the data.
         </h4>
-        <p style="margin-top: 100px">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
+        <p style="margin-top: 50px">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
           the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better 
           understand the factors in migration.
         </p>
-        <h4 style="margin-top: 100px">It is key to remember that this survey was conducted on migrants after their journey which means that 
+        <h4 style="margin-top: 50px">It is key to remember that this survey was conducted on migrants after their journey which means that 
           the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>. 
-        </h4>   
-         <h4 style ="margin-top: 100px">Scroll to continue</h4>
-        <div style = "height:500px"></div>
+        </h4>
+      </div>
+         <h4 style ="margin-top: 50px">Scroll to continue</h4>
+        <div style = "height:50px"></div>
     </div>
     
 <!-- another bookend to add map-->
@@ -43,7 +45,7 @@
 >
   <div class="background" slot="background">
     
-      {#if progress <0.15}
+      {#if progress <0.10}
         
         <div class="container text-sizing transition-class" 
           style="background-color: #9d87ba;">
@@ -67,7 +69,7 @@
 
       {/if}
 
-      {#if progress >=0.15 && progress<0.30}
+      {#if progress >=0.10 && progress<0.30}
         <div class="container text-sizing transition-class" 
           style="background-color: #eadc41;"> 
           <div style={parent_style}>
@@ -76,7 +78,7 @@
 
             </h2>
 
-            <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;">According to the survey, women (20%) were less likely to suffer from violence than men (27%). This stat does not reflect however other studies that report that 80% of women experience rape and sexual assault during migration[source]. This may be due to the fact that the survey is collected from the family members of the migrants who are ashamed of the traumatic experience and decide not to share it with their family members back home.
+            <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;">According to the survey, women (20%) were less likely to suffer from violence than men (27%). <strong>This stat does not reflect however other studies that report that 80% of women experience rape and sexual assault during migration[source].</strong><br>  This may be due to the fact that the survey is collected from the family members of the migrants who are ashamed of the traumatic experience and decide not to share it with their family members back home.
             </p>
           </div> 
         </div>  
@@ -91,7 +93,7 @@
 
             </h2>
 
-            <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Natural hazards are increasingly becoming a motive for migration from central America. In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy.   [source] Many decided to migrate at that exact moment. The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors.
+            <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"><strong>Natural hazards are increasingly becoming a motive for migration from central America.</strong><br>  In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy.   [source] Many decided to migrate at that exact moment. The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors.
             </p>
           </div> 
         </div>
@@ -121,7 +123,7 @@
           Migration method of travel 
         </h2>
 
-        <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children. The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. <br> The reality was far from this. Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable and easy targets for bad actors. 
+        <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children. The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. <br> The reality was far from this. <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who were particularly vulnerable.</strong>
         </p>
       </div> 
     </div>
@@ -382,7 +384,7 @@
     /*background-color: aquamarine;*/
     height : 100vh;
     width: 100vw;
-    background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png");
+    background-image: url("../migration_portada-modified.webp");
     margin-top: 0px;
 
   }
@@ -413,6 +415,14 @@
 
 body {
     font-family: "Georgia", serif;
+}
+
+.text-background {
+    background-color: rgba(255, 255, 255, 0.6); /* white background with 60% opacity */
+    padding: 20px;
+    border-radius: 10px; /* optional, for rounded corners */
+    max-width: 80%; /* optional, to limit the width of the text block */
+    margin: auto; /* optional, to center the text block */
 }
 
 
