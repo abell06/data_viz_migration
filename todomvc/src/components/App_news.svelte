@@ -11,7 +11,7 @@
 
 <main>
   <!-- entry page put picture here -->
-    <div class = 'bookend_image' >
+    <div class='bookend_image'>
       <!-- set background to picture -->
         <h1 style="margin-top: 1px; margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
         <h4 style="margin-top: 100px">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
@@ -170,25 +170,32 @@
     <App_guided select_index = 0/>
     
     
+    <div style = "height:100px"></div>
+    <div class='quote'>
+      <h3>
+        &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap. They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador, (February 2020)
+      </h3>  
+    </div>
 
 
-    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
-      &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap. They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador, (February 2020)
-    </h3>
     <div style = "height:100px"></div>
     <App_guided select_index = 1/>
     
     
     <div style = "height:100px"></div>
 
-    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
-      &ldquo; We are doomed here. The desperation, the sadness, that's what makes you migrate." - Magdalena Flores (Honduras 2020)
-    </h3>
+    <div class='quote'>
+      <h3>
+        &ldquo; We are doomed here. The desperation, the sadness, that's what makes you migrate." - Magdalena Flores (Honduras 2020)
+     </h3>  
+    </div>
 
+    <div class='quote'>
+      <h3>
+        &ldquo; I never wanted to do this.” - Said Ana Hernández, clutching her 11-year-old's hand at a gas station - “The situation is forcing me to. You get to a point where you don't have anything to give them to eat.” (Honduras 2020)
+     </h3>  
+    </div>
 
-    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
-      &ldquo; I never wanted to do this.” - Said Ana Hernández, clutching her 11-year-old's hand at a gas station - “The situation is forcing me to. You get to a point where you don't have anything to give them to eat.” (Honduras 2020)
-    </h3>
     <div style = "height:100px"></div>
     
 
@@ -202,21 +209,28 @@
     <App_guided select_index = 3/>
    
     <div style = "height:100px"></div>
-    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
-      &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things, from the idea of reaching the north to being well united.” - Andrea (September 2019)
-    </h3>
+    <div class='quote'>
+      <h3>
+        &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things, from the idea of reaching the north to being well united.” - Andrea (September 2019)
+      </h3>  
+    </div>
+
     <div style = "height:100px"></div>
-    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
-      &ldquo; It hasn't been easy to come in the caravan because everything is difficult. Contrary to what I thought, there aren't many facilities, and it takes a lot of effort to come in the caravan. You have to walk a lot, rest little, and even when you rest, you're always taking care of yourself. There's a lack of trust with those you come with because not everyone knows each other. There are many problems, and the journey in the caravan is not safe.” - Alicia (September 2019)
-
-    </h3>
+    <div class='quote'>
+      <h3>
+        &ldquo; It hasn't been easy to come in the caravan because everything is difficult. Contrary to what I thought, there aren't many facilities, and it takes a lot of effort to come in the caravan. You have to walk a lot, rest little, and even when you rest, you're always taking care of yourself. There's a lack of trust with those you come with because not everyone knows each other. There are many problems, and the journey in the caravan is not safe.” - Alicia (September 2019)
+      </h3>  
+    </div>
+    
     <div style = "height:100px"></div>
 
-    <h3 style="margin-top: 20px; font-style: italic; border-left: 2px solid gray; padding-left: 10px; quotes: '\201C' '\201D';">
-      &ldquo; In the end, there were so many of us, it was scary. When my wife went to the bathroom, someone touched her inappropriately, but she didn't tell me out of fear until the next day. There was nothing I could do.” - Rodrigo (2020)
+    <div class='quote'>
+      <h3>
+        &ldquo; In the end, there were so many of us, it was scary. When my wife went to the bathroom, someone touched her inappropriately, but she didn't tell me out of fear until the next day. There was nothing I could do.” - Rodrigo (2020)
 
+      </h3>  
+    </div>
 
-    </h3>
     <div style = "height:100px"></div>
     
     <Bars style="margin-left: 50px"/>
@@ -329,13 +343,34 @@
     margin: 0 0 2em 0;
   }
 
+  .quote {
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-style: italic;
+    /*border-left: 5px solid rgb(216, 27, 213);*/
+    color: #1c3441;
+    background-color: #a04c0c;
+    border-radius: 10px; /* adjust this value as needed */
+  }
+
+  /*
+ .quote::before {
+    content: open-quote;
+  }
+
+ .quote::after {
+    content: close-quote;
+  }
+  */
+
+
   .bookend {
     /*background-color: aquamarine;*/
     padding: 0 10.0%;
     /* Add any other styles you want here */
     height : 100vh;
     width: 100vw;
-    margin-top: 0px;
 
   }
   .bookend_image {
