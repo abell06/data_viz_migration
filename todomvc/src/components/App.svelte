@@ -48,7 +48,7 @@
 <main>
 
 
-    <h2 style="margin-top: 5px">Are some "irregular" migrants experiencing violence at higher rates than others?</h2>
+    <h5 style="margin-top: 5px">Are some "irregular" migrants experiencing violence at higher rates than others?</h5>
 
     <select bind:value={selected}>
         {#each options as option}
