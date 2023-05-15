@@ -156,7 +156,7 @@
     </div>
     <div
     class={hovered === -1 ? "tooltip-hidden": "tooltip-visible"}	
-    style="left: {recorded_mouse_position.x}px; top: {recorded_mouse_position.y-1000}px"
+    style="left: {recorded_mouse_position.x}px; top: {recorded_mouse_position.y-2400}px"
 >
     {#if hovered !== -1}
         {Math.floor(yVals[hovered]*100)}% 
