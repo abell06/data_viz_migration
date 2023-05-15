@@ -1,5 +1,5 @@
 <script>
-    import Polygon from '../assets/map_annotated.svelte';
+    import Polygon from '../assets/map3 copy.svelte';
   </script>
   
   <main>
