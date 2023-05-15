@@ -41,16 +41,15 @@
 
     <!-- moved intro text to map page -->
     <div class = 'map'>
-      <h4 style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">In this webpage, we highlight the often violent jounrey that irregular Central American migrants take to reach the US. 
-        We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
-        compare to reporting by news outlets to understand the strenghts and limitations of the data.
+      <h4 style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">In this webpage, we highlight the often violent journey that irregular Central American migrants take to reach the US. 
+        We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 and then
+        compare it to news reporting. 
+        This approach helps us understand the data's strenghts and limitations and prompt viewers to think critically about the survey's findings.
       </h4>
-        <p style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">The data collected from approximately 5,000 household interviews and over 6,000 web survey responses across 
-                the three countries conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better 
-                understand the factors in migration.
+        <p style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">The data was collected from approximately 5,000 household interviews and over 6,000 web survey responses across three Central American countries: Honduras, Guatemala, and El Salvador. This survey was conducted as part of a joint initiative between WFP and the International Organization for Migration (IOM) to better understand the factors in migration.
         </p>
-        <h4 style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">It is key to remember that this survey was conducted on migrants after their journey which means that 
-                the data we are seeing is likely subject to <a href="https://en.wikipedia.org/wiki/Survivorship_bias"><em>Survival Bias.</em> </a>
+        <h4 style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">It is key to remember that this survey was conducted on migrants <em>after</em> their journey which means that 
+                the data is likely subject to <a href="https://en.wikipedia.org/wiki/Survivorship_bias"><em>survival bias.</em> </a>
       </h4>
 
         <!-- <div style = "height:500px"></div> -->
@@ -82,7 +81,7 @@
           Irregular migrant experience violence at an alarmingly high rate
 
           </h2>  
-          <p use:fit={{min_size: 3, max_size: 40}} style="margin-center: 100px;">According to the survey, about <strong>1 in 4 out of the 1268 reported irregular migrants surveyed suffer some form of violence during their journey.</strong><br> 
+          <p use:fit={{min_size: 3, max_size: 30}} style="margin-center: 100px;">According to the survey, about <strong>1 in 4 of the irregular migrants surveyed suffered some form of violence during their journey.</strong><br> 
             <em>Here "irregular" migration refers to migration not following regular migration pathways such as through the use of visas, foreign residence permits, or those seeking asylum.</em>
           </p>
           
@@ -106,9 +105,10 @@
 
             </h2>
 
-            <p use:fit={{min_size: 3, max_size: 30}} style="margin-top: 5px;"> According to the survey, women (20%) were less likely to suffer from violence than men (27%).
+            <p use:fit={{min_size: 3, max_size: 30}} style="margin-top: 5px;"> According to the survey, women (20%) were less likely to report suffering from violence than men (27%).
               However, <strong>this statistic does not align with other studies, which report that 60% of women experience rape and sexual assault during migration</strong> <sup><a href="https://unu.edu/publications/articles/fleeing-to-mexico-for-safety-the-perilous-journey-for-migrant-women.html" target="_blank">2</a></sup>.
-              The discrepancy may be due to the survey data being collected from the migrant's family members. The victims have reported feeling shame and trauma about the experience and may not want to share it with their family members back home.
+              This disparity could arise from the survey's methodology, which collected information from the migrant's family members. Migrants may be hesitant to share their traumatic experiences with their family members due to the stigma surrounding sexual violence.
+
             </p>
           </div> 
         </div>  
