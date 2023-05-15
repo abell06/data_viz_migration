@@ -280,7 +280,7 @@
 		font: 15px sans-serif;
 		font-family: Georgia;
 		visibility: visible;
-		background-color: #f0dba8;
+		background-color: whitesmoke;
 		border-radius: 10px;
 		width: 200px;
 		color: black;

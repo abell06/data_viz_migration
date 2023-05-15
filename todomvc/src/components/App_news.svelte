@@ -71,10 +71,10 @@
 >
   <div class="background" slot="background">
     
-      {#if progress <0.13}
+      {#if progress <0.11}
         
         <div class="container text-sizing transition-class" 
-          style="background-color: #9d87ba;">
+          style="background-color: #9d87ba; opacity: 0.8">
           <div style={parent_style}>
             
           <h2  style="margin-top: 5px">
@@ -96,9 +96,9 @@
 
       {/if}
 
-      {#if progress >=0.13 && progress<0.28}
+      {#if progress >=0.11 && progress<0.27}
         <div class="container text-sizing transition-class" 
-          style="background-color: #eadc41;"> 
+          style="background-color: #eadc41; opacity: 0.9;"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
               Gender vulnerablity
@@ -115,9 +115,9 @@
         </div>  
       {/if} 
 
-      {#if progress >=0.28 && progress <0.54}
+      {#if progress >=0.27 && progress <0.50}
         <div class="container text-sizing transition-class" 
-        style="background-color: #20a8b0;"> 
+        style="background-color: #20a8b0; opacity: 0.8;"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
               Migration motives
@@ -134,9 +134,9 @@
         </div>
       {/if} 
 
-    {#if progress >=0.54 && progress < 0.68}
+    {#if progress >=0.50 && progress < 0.67}
       <div class="container text-sizing"
-        style="background-color: #e56147;">
+        style="background-color: #e56147; opacity:0.8;">
         <div style={parent_style}>
           <h2 style="margin-top: 5px">
             Migration companion 
@@ -152,9 +152,9 @@
     {/if} 
 
 
-    {#if progress >=0.68 && progress < 0.80}
+    {#if progress >=0.67 && progress < 0.80}
     <div class="container text-sizing"
-     style="background-color: #d34188;">
+     style="background-color: rgba(211, 65, 136, 0.5);">
       <div style={parent_style}>     
         <h2 style="margin-top: 5px">
           Migration method of travel 
@@ -181,7 +181,7 @@
 
       {#if progress >= 0.80 && progress < 0.91}
       <div class="container text-sizing"
-         style="background-color: #d34188;">
+         style="background-color: rgba(211, 65, 136, 0.5);">
         <div style={parent_style}>  
           <p use:fit={{min_size: 3, max_size: 30}}  style="margin-top: 5px">
             On the ground however the reality is much more complex and hazardous. The caravans are not a compact and tight knit organized group of people as hoped. 
@@ -270,7 +270,7 @@
     <App_guided select_index = 3/>
    
     <div style = "height:10px"></div> 
-    <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
+    <div class='quote' style="background-color: rgba(211, 65, 136, 0.3);">
       <h3>
         &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. 
         They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things,
@@ -279,7 +279,7 @@
     </div>
 
     <div style = "height:10px"></div>
-    <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
+    <div class='quote' style="background-color: rgba(211, 65, 136, 0.3);">
 
       <h3>
         &ldquo; It hasn't been easy to come in the caravan because everything is difficult.
@@ -292,7 +292,7 @@
     
     <div style = "height:10px"></div>
 
-    <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
+    <div class='quote' style="background-color: rgba(211, 65, 136, 0.3);">
       <h3>
         &ldquo; In the end, there were so many of us, it was scary.
          When my wife went to the bathroom, someone touched her inappropriately, but she didn't tell me out of fear until the next day. 
@@ -314,20 +314,20 @@
 <div class='bookend' style="background-color: #dcdada; padding: 0px;">
 <body style="background-color: #dcdada;">
   <main style="padding: 30px;">
-        <h4 style="margin-top: 0px; color: #dddada;">On this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+        <h4 style="margin-top: 0px; color: #dddada; font-weight: normal;">On this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
   
-        <h4 style="margin-top: 0px">On this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).
+        <h4 style="margin-top: 0px; font-weight: normal;">On this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).
         </h4>
 
-          <h4 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of migration.
+          <h4 style="margin-top: 50px; font-weight: normal;">Our main goal is to shed light on the most vulnerable forms of migration.
             We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
             Trump administration during the COVID pandemic and has been used to expel migrants from the United States without due process, is set to expire<sup><a href="https://www.wola.org/2023/05/weekly-u-s-mexico-border-update-title-42-ends/" target="_blank">5</a></sup>. 
           </h4>
           
-          <h4 style="margin-top: 50px">Furthermore, we hope to inform potential future migrants about the risks they may face so they can make more informed decisions.
+          <h4 style="margin-top: 50px; font-weight: normal;">Furthermore, we hope to inform potential future migrants about the risks they may face so they can make more informed decisions.
             We also hope to provide a resource for journalists and researchers who are interested in this topic.
           </h4>
-          <h4 style="margin-top: 50px;">We showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this area.
+          <h4 style="margin-top: 50px;font-weight: normal;;">We showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this area.
             Overall, we try to bring attention to weaknesses and biases in the data, particularly when it comes to violence against women where the data
             and the reporting diverge significantly. We believe that contextualizing the data is critical to better capture the stories of these migrants.
           </h4> 
@@ -342,12 +342,12 @@
               <!-- Add your Acknowledgement and Reference sections here -->
             <div style="background-color: #dcdada;">
               <section style="background-color: #dcdada; padding: 20px;margin-top: 20px; text-align: left;">
-                <h2>Acknowledgements</h2>
+                <h2  >Acknowledgements</h2>
                 <div style = "height:10px"></div>
-                <h3 style="font-size: 24px;">
+                <h3 style="font-size: 24px; font-weight: normal;">
                   We would like to express our deepest appreciation to all those who provided us the possibility to complete this project. We would particularly give to thanks the World Food Program staff, who shared this important and sensitive data with us.
                 </h3>
-                <h3 style="font-size: 24px;">
+                <h3 style="font-size: 24px; font-weight: normal;">
                   Furthermore, we would also like to acknowledge with much appreciation the crucial role that the faculty and TA staff who supported us throughout the project and the semester.
                 </h3>
               </section>

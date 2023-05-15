@@ -150,7 +150,7 @@ function addSpace(str) {
  
   <div
   class={hovered === -1 ? "tooltip-hidden": "tooltip-visible"}	
-  style="left: {recorded_mouse_position.x -100}px; top: {recorded_mouse_position.y -2600}px">
+  style="left: {recorded_mouse_position.x }px; top: {recorded_mouse_position.y -2600}px">
   {#if hovered !== -1 && hovered.value == 1}
       Type of violence reported: {stringVals[hovered.data].join(', ')} 
   {/if}
@@ -227,7 +227,7 @@ function addSpace(str) {
     font: 15px sans-serif;
     font-family: Georgia;
     visibility: visible;
-    background-color: #f0dba8;
+    background-color: whitesmoke;
     border-radius: 10px;
     width: 200px;
     color: black;
