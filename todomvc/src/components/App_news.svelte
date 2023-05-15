@@ -304,9 +304,9 @@
 </div>
 </main>
 
+<div class='bookend' style="background-color: #dcdada; padding: 20px;">
 <body style="background-color: #dcdada;">
   <main>
-      <div class='bookend' style="background-color: #dcdada; padding: 20px;">
         <h4 style="margin-top: 0px; color: #dddada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
   
         <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
@@ -328,7 +328,6 @@
           </h3>
         
         
-      </div>
   </main>
 
   <!-- Add your Acknowledgement and Reference sections here -->
@@ -375,6 +374,7 @@
       </ol>
   </section>
 </body>
+</div>
   
 
 <style>
