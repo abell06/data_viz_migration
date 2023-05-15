@@ -20,6 +20,7 @@
 <!-- ======= -->
       <div class="text-background" style="text-align: center;">
         <h1 style="margin-top: 100px: margin-right: 40px; margin-left: 40px">The Perilous Journey for Central American Migrants Traveling to the US</h1>
+        <h5 style ="margin-top: 20px"><em>Authors: Les Armstrong, Allison Bell, and Lan Ha</em></h5>
         <h4 style ="margin-top: 100px"><em>Scroll to continue</em></h4>
 <!--         <h4 style="margin-top: 30px">In this webpage, we highlight the often violent journey that irregular Central American migrants take to reach the US. 
           We analyze data from a survey conducted by the <a href="https://www.wfp.org">World Food Programme (WFP)</a> in 2019 which we then
@@ -49,7 +50,7 @@
                 understand the factors in migration.
         </p>
         <h4 style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">It is key to remember that this survey was conducted on migrants after their journey which means that 
-                the data we are seeing is likely subject to <i><a href="https://en.wikipedia.org/wiki/Survivorship_bias">Survivorship Bias</a></i>.
+                the data we are seeing is likely subject to <em>Survival Bias</em> <sup><a href="https://en.wikipedia.org/wiki/Survivorship_bias" target="_blank">1</a></sup>.
       </h4>
 
         <!-- <div style = "height:500px"></div> -->
@@ -106,7 +107,7 @@
             </h2>
 
             <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;"> According to the survey, women (20%) were less likely to suffer from violence than men (27%).
-              However, <strong>this statistic does not align with other studies, which report that 80% of women experience rape and sexual assault during migration [source].</strong> 
+              However, <strong>this statistic does not align with other studies, which report that 60% of women experience rape and sexual assault during migration</strong> <sup><a href="https://digital.law.washington.edu/dspace-law/bitstream/handle/1773.1/1282/22PRLPJ713.pdf?sequence=1&isAllowed=y" target="_blank">2</a></sup> 
               The discrepancy may be due to the survey data being collected from the migrant's family members. The victims have reported feeling shame and trauma about the experience and may not want to share it with their family members back home.
             </p>
           </div> 
@@ -124,9 +125,9 @@
 
             <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"><strong>Natural hazards are increasingly becoming a motive for migration from central America.</strong><br>  
               In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. 
-              This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy. [source]
+              This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy. <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525" target="_blank">3</a></sup>
                Many decided to migrate at that exact moment. 
-               <strong>The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors.</strong>
+               <strong>The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">4</a></sup>.
             </p>
           </div> 
         </div>
@@ -140,7 +141,9 @@
             Migration companion 
           </h2>
 
-          <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Attempting to travel alone has many perils. It is easy to be targeted by cartels and human smugglers who are looking for desperate lost people. This is why most people opt to either pay a coyote who know the lay of the land or join a migrant caravan. 
+          <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Attempting to travel alone has many perils. It is easy to be targeted by cartels and human smugglers who are looking for desperate lost people.
+             This is why most people opt to either pay a coyote who know the lay of the land or join a migrant caravan
+             <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">4</a></sup>.
           </p>
         </div> 
       </div>
@@ -156,9 +159,13 @@
           Migration method of travel 
         </h2>
 
-        <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"> <strong>Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children.</strong><br>
-           The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. The reality was far from this. <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who are particularly vulnerable during the journey.</strong>
-        </p>
+        <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px"> 
+          <strong>Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children.</strong><br>
+          The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. The reality was far from this. 
+          <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who are particularly vulnerable during the journey.</strong><sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
+      </p>
+      
+        
       </div> 
     </div>
 
@@ -173,7 +180,8 @@
          style="background-color: #d34188;">
         <div style={parent_style}>  
           <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted.<br> Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds.
-      
+          <br>
+           <a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">Source</a>
           </p>
         </div> 
       </div>
@@ -297,14 +305,15 @@
         <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
           We also hope to provide a resource for journalists and researchers who are interested in this topic
         </h3>
-        <h3 style="margin-top: 50px">
-          If you have been moved by these data points and stories,  
-           <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
-        </h3>
         <h4 style="margin-top: 50px;">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
           Overall, we believe that we have unconvered significant weaknesses and biases hidden in the data, particularly when it comes to violence as it relates to gender differences where the data
           and the reporting diverge significantly. We highlight this issue because we believe that it is very important to not always relay on data to tell the whole story.
         </h4> 
+        <h3 style="margin-top: 50px">
+          If you have been moved by these data points and stories,  
+           <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
+        </h3>
+        
 
         
     </div>
@@ -430,6 +439,17 @@
     margin-top: 0px;
 
   }
+
+  .bookend_image2 {
+    /*background-color: aquamarine;*/
+    height : 100vh;
+    width: 100vw;
+    background-image: url("../migration_portada-modified.webp");
+    margin-top: 0px;
+
+  }
+
+
   .container {
 		
 		padding: 20px;
