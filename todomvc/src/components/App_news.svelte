@@ -134,7 +134,7 @@
         </div>
       {/if} 
 
-    {#if progress >=0.50 && progress < 0.67}
+    {#if progress >=0.50 && progress < 0.62}
       <div class="container text-sizing"
         style="background-color: rgba(229, 97, 71, 0.7)">
         <div style={parent_style}>
@@ -152,7 +152,7 @@
     {/if} 
 
 
-    {#if progress >=0.67 && progress < 0.80}
+    {#if progress >=0.62 && progress < 0.80}
     <div class="container text-sizing"
      style="background-color: rgba(211, 65, 136, 0.5);">
       <div style={parent_style}>     
