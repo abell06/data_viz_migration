@@ -307,79 +307,80 @@
 </div>
 </main>
 
-<div class='bookend' style="background-color: #dcdada; padding: 20px;">
+<div class='bookend' style="background-color: #dcdada; padding: 0px;">
 <body style="background-color: #dcdada;">
-  <main>
+  <main style="padding: 30px;">
         <h4 style="margin-top: 0px; color: #dddada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
   
         <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).
         </h4>
 
-          <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
+          <h4 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
             We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
             Trump administration during the COVID pandemic and has been used to expel migrants from the United States without due process, is set to expire<sup><a href="https://www.wola.org/2023/05/weekly-u-s-mexico-border-update-title-42-ends/" target="_blank">5</a></sup>. 
-          </h3>
+          </h4>
           
-          <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
+          <h4 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
             We also hope to provide a resource for journalists and researchers who are interested in this topic
-          </h3>
+          </h4>
           <h4 style="margin-top: 50px;">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
             Overall, we believe that we have unconvered significant weaknesses and biases hidden in the data, particularly when it comes to violence as it relates to gender differences where the data
             and the reporting diverge significantly. We highlight this issue because we believe that it is very important to not always relay on data to tell the whole story.
           </h4> 
-          <h3 style="margin-top: 50px; margin-bottom: 50px;" >
+          <h4 style="margin-top: 50px; margin-bottom: 50px;" >
             If you have been moved by these data points and stories,  
             <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
-          </h3>
+          </h4>
         
 
 
       
               <!-- Add your Acknowledgement and Reference sections here -->
-          <section style="background-color: #dcdada; padding: 20px;margin-top: 20px; text-align: left;">
-            <h2>Acknowledgements</h2>
-            <div style = "height:10px"></div>
-            <h3 style="font-size: 24px;">
-              We would like to express our deepest appreciation to all those who provided us the possibility to complete this project. We would particularly give to thanks the World Food Program staff, who shared this important and sensitive data with us.
-            </h3>
-            <h3 style="font-size: 24px;">
-              Furthermore, we would also like to acknowledge with much appreciation the crucial role that the faculty and TA staff who supported us throughout the project and the semester.
-            </h3>
-          </section>
+            <div style="background-color: #dcdada;">
+              <section style="background-color: #dcdada; padding: 20px;margin-top: 20px; text-align: left;">
+                <h2>Acknowledgements</h2>
+                <div style = "height:10px"></div>
+                <h3 style="font-size: 24px;">
+                  We would like to express our deepest appreciation to all those who provided us the possibility to complete this project. We would particularly give to thanks the World Food Program staff, who shared this important and sensitive data with us.
+                </h3>
+                <h3 style="font-size: 24px;">
+                  Furthermore, we would also like to acknowledge with much appreciation the crucial role that the faculty and TA staff who supported us throughout the project and the semester.
+                </h3>
+              </section>
 
-          <section style="background-color: #dcdada;  text-align: left;">
-      
-            <h4 style="font-size: 35px;padding: 20px;margin-top: 10px;">References</h4>
-            <ol style="font-size: 24px; padding: 20px;margin-top: 10px;">
-                <li>
-                    <p style="margin-left: 100px; font-size: 24px;">
-                      Simón Pedro Izcara Palacios & Karla Lorena Andrade Rubio. (2022). Migración y violencia: las caravanas  de migrantes centroamericanos. Universidad Autónoma de Tamaulipas, Victoria, México. <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853">1</a></sup>
-                    </p>
-                </li>
-                <li>
-                  <p style="margin-left: 100px; font-size: 24px;">
-                    Fleeing to Mexico for Safety: The Perilous Journey for Migrant Women. United Nations University. <sup><a href="https://unu.edu/publications/articles/fleeing-to-mexico-for-safety-the-perilous-journey-for-migrant-women.html">2</a></sup>
-                  </p>
-                </li>
-                <li>
-                  <p style="margin-left: 100px; font-size: 24px;">
-                    "We Are Doomed": Devastation From Storms Fuels Migration in Honduras (2021). NYTimes - By Natalie Kitroeff. <sup><a href="https://www.nytimes.com/2021/04/06/world/americas/migration-honduras-central-america.html">3</a></sup>
-                  </p>
-                </li>
-                <li>
-                  <p style="margin-left: 100px; font-size: 24px;">
-                    "We're defeated": Climate migrants fleeing storm-stricken Central America struggle to find refuge (2021). NBC News - By Albinson Linares, Noticias Telemundo <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525">4</a></sup>
-                  </p>
-                </li>
-                <li>
-                  <p style="margin-left: 100px; font-size: 24px;">
-                    Weekly U.S.-Mexico Border Update: Title 42 Ends (May 2023). Advocacy for Human Rights in the Americas - By Adam Isacson <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853">1</a></sup>
-                  </p>
-                </li>
-                <!-- Add more as required -->
-            </ol>
-          </section>
-        
+              <section style="background-color: #dcdada;  text-align: left;">
+          
+                <h4 style="font-size: 35px;padding: 20px;margin-top: 10px;">References</h4>
+                <ol style="font-size: 24px; padding: 20px;margin-top: 10px;">
+                    <li>
+                        <p style="margin-left: 100px; font-size: 24px;">
+                          Simón Pedro Izcara Palacios & Karla Lorena Andrade Rubio. (2022). Migración y violencia: las caravanas  de migrantes centroamericanos. Universidad Autónoma de Tamaulipas, Victoria, México. <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853">1</a></sup>
+                        </p>
+                    </li>
+                    <li>
+                      <p style="margin-left: 100px; font-size: 24px;">
+                        Fleeing to Mexico for Safety: The Perilous Journey for Migrant Women. United Nations University. <sup><a href="https://unu.edu/publications/articles/fleeing-to-mexico-for-safety-the-perilous-journey-for-migrant-women.html">2</a></sup>
+                      </p>
+                    </li>
+                    <li>
+                      <p style="margin-left: 100px; font-size: 24px;">
+                        "We Are Doomed": Devastation From Storms Fuels Migration in Honduras (2021). NYTimes - By Natalie Kitroeff. <sup><a href="https://www.nytimes.com/2021/04/06/world/americas/migration-honduras-central-america.html">3</a></sup>
+                      </p>
+                    </li>
+                    <li>
+                      <p style="margin-left: 100px; font-size: 24px;">
+                        "We're defeated": Climate migrants fleeing storm-stricken Central America struggle to find refuge (2021). NBC News - By Albinson Linares, Noticias Telemundo <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525">4</a></sup>
+                      </p>
+                    </li>
+                    <li>
+                      <p style="margin-left: 100px; font-size: 24px;">
+                        Weekly U.S.-Mexico Border Update: Title 42 Ends (May 2023). Advocacy for Human Rights in the Americas - By Adam Isacson <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853">1</a></sup>
+                      </p>
+                    </li>
+                    <!-- Add more as required -->
+                </ol>
+              </section>
+            </div>
   </main>
 
   
