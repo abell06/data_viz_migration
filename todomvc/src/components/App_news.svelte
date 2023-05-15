@@ -307,11 +307,10 @@
 </div>
 </main>
 
+<div class='bookend' style="background-color: #dcdada; padding: 20px;">
 <body style="background-color: #dcdada;">
   <main>
-      <div class='bookend' style="background-color: #dcdada; padding: 20px;">
-        <!-- Your main content here -->
-        <h4 style="margin-top: 0px; color: #dcdada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+        <h4 style="margin-top: 0px; color: #dddada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
   
         <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).
         </h4>
@@ -381,11 +380,11 @@
             </ol>
           </section>
         
-      </div>
   </main>
 
   
 </body>
+</div>
   
 
 <style>
