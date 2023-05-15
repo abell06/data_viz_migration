@@ -180,7 +180,7 @@
          style="background-color: #d34188;">
         <div style={parent_style}>  
           <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">
-            Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted.
+            Human traffickers follow the caravan to seize opportunities to target and pick off migrants who are left behind due to taking breaks.
             <br> 
             Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds
         
@@ -195,8 +195,8 @@
         <div style={parent_style}> 
           <h4 use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 50px;">
             In this section we allow the user to interact with the data by reviewing the different risk factors and how they relate to each other across different travel conditions. Please select one 
-            of the violence type and one of the comparators to view the bar chart. We organize this data from highest risk factor to lowest risk factor so as to not only understand the most dangerous factors
-            but also the safest. Hover over the bars to see the category of each bar.
+            of the violence type and one of the comparators to view the bar chart. We arrange this data in descending order of risk. 
+            You can view the category of each bar by hovering over them." 
           </h4>
         </div> 
       </div>  
