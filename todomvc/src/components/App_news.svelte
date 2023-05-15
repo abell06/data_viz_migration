@@ -108,7 +108,8 @@
             <p use:fit={{min_size: 3, max_size: 30}} style="margin-top: 5px;"> According to the survey, women (20%) were less likely to report suffering from violence than men (27%).
               However, <strong>this statistic does not align with other studies, which report that 60% of women experience rape and sexual assault during migration</strong> <sup><a href="https://unu.edu/publications/articles/fleeing-to-mexico-for-safety-the-perilous-journey-for-migrant-women.html" target="_blank">2</a></sup>.
               This disparity could arise from the survey's methodology, which collected information from the migrant's family members. Migrants may be hesitant to share their traumatic experiences with their family members due to the stigma surrounding sexual violence.
-
+              This extra degree of seperation from the migrants could result in some types of violence being underreported.
+             
             </p>
           </div> 
         </div>  
@@ -123,11 +124,11 @@
 
             </h2>
 
-            <p use:fit={{min_size: 3, max_size: 30}}  style="margin-top: 5px"><strong>Natural hazards are increasingly becoming a motive for migration from central America.</strong><br>  
-              In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. 
-              This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy. <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525" target="_blank">4</a></sup>
+            <p use:fit={{min_size: 3, max_size: 30}}  style="margin-top: 5px"><strong>Natural hazards are increasingly becoming a motive for migration from Central America.</strong><br>  
+              In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, impacting nearly half the population (about 4 millions people) and leveling entire neighborhoods. 
+              This was right after a ruinous 5-year drought that drove many rural communities to bankruptcy. <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525" target="_blank">4</a></sup>
                Many decided to migrate at that exact moment. 
-               <strong>The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
+               <strong>The abruptness meant they were underprepared and travelled with their children, making them easier targets for malicious actors</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
             </p>
           </div> 
         </div>
@@ -141,8 +142,8 @@
             Migration companion 
           </h2>
 
-          <p use:fit={{min_size: 3, max_size: 30}}  style="margin-top: 5px"><strong>Attempting to travel alone has many perils.</strong> It is easy to be targeted by cartels and human smugglers who are looking for desperate lost people.
-             This is why most people opt to either pay a coyote who know the lay of the land or join a migrant caravan
+          <p use:fit={{min_size: 3, max_size: 30}}  style="margin-top: 5px"><strong>Attempting to travel alone has many perils,</strong> particularly as cartels and human smugglers actively target migrants who are travelling alone.
+             Most people therefore opt to join a migrant caravan or pay a coyote who knows the lay of the land
              <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
           </p>
         </div> 
@@ -160,9 +161,12 @@
         </h2>
 
         <p use:fit={{min_size: 3, max_size: 30}} style="margin-top: 5px"> 
-          <strong>Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children.</strong><br>
-          The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. The reality was far from this. 
-          <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who are particularly vulnerable during the journey</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
+          <strong>Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children who would not have migrated through other means.</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
+          <br>
+
+           By traveling in groups who share a common objective, migrants hope that the they will be better protected from external threats.
+
+         
       </p>
       
         
@@ -182,8 +186,8 @@
           <p use:fit={{min_size: 3, max_size: 30}}  style="margin-top: 5px">
             On the ground however the reality is much more complex and hazardous. The caravans are not a compact and tight knit organized group of people as hoped. 
             Instead, many of the most vulnearable migrants who move slower, particularly those with children, are left behind.  
-            Human traffickers know this and follow the caravan to seize opportunities to target and pick off these most vulnearable migrants.
-            These human traffickers then submit these kidnapped migrants to forced labor or hold them for a ransom.
+            Human traffickers exploit this fact and follow the caravan to target and pick off these most vulnearable migrants.
+            They then submit the kidnapped migrants to forced labor or hold them for ransom.
             <br> 
             In addition, sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds
         
@@ -197,8 +201,8 @@
       <div class="container text-sizing" style="background-color:#bbd4bc"> 
         <div style={parent_style}> 
           <p use:fit={{min_size: 3, max_size: 30}}  style="margin-top: 50px;">
-            In this section we allow the user to interact with the data by reviewing the different risk factors and how they relate to each other across different travel conditions. Please select one 
-            of the violence type and one of the comparators to view the bar chart. We arrange this data in descending order of risk. 
+            In this section we invite you to interact with the data by reviewing the different risk factors and how they relate to each other. Please select one 
+            of the violence types and one of the comparators to view the bar chart. We arrange this data in descending order of risk. 
             You can view the category of each bar by hovering over them.
           </p>
         </div> 
@@ -310,25 +314,25 @@
 <div class='bookend' style="background-color: #dcdada; padding: 0px;">
 <body style="background-color: #dcdada;">
   <main style="padding: 30px;">
-        <h4 style="margin-top: 0px; color: #dddada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+        <h4 style="margin-top: 0px; color: #dddada;">On this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
   
-        <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).
+        <h4 style="margin-top: 0px">On this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).
         </h4>
 
-          <h4 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
+          <h4 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of migration.
             We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
             Trump administration during the COVID pandemic and has been used to expel migrants from the United States without due process, is set to expire<sup><a href="https://www.wola.org/2023/05/weekly-u-s-mexico-border-update-title-42-ends/" target="_blank">5</a></sup>. 
           </h4>
           
-          <h4 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
-            We also hope to provide a resource for journalists and researchers who are interested in this topic
+          <h4 style="margin-top: 50px">Furthermore, we hope to inform potential future migrants about the risks they may face so they can make more informed decisions.
+            We also hope to provide a resource for journalists and researchers who are interested in this topic.
           </h4>
-          <h4 style="margin-top: 50px;">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
-            Overall, we believe that we have unconvered significant weaknesses and biases hidden in the data, particularly when it comes to violence as it relates to gender differences where the data
-            and the reporting diverge significantly. We highlight this issue because we believe that it is very important to not always relay on data to tell the whole story.
+          <h4 style="margin-top: 50px;">We showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this area.
+            Overall, we try to bring attention to weaknesses and biases in the data, particularly when it comes to violence against women where the data
+            and the reporting diverge significantly. We believe that contextualizing the data is critical to better capture the stories of these migrants.
           </h4> 
           <h4 style="margin-top: 50px; margin-bottom: 50px;" >
-            If you have been moved by these data points and stories,  
+            If you are moved by these data points and stories,  
             <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
           </h4>
         
