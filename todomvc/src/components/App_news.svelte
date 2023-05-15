@@ -74,11 +74,11 @@
       {#if progress <0.11}
         
         <div class="container text-sizing transition-class" 
-          style="background-color: #9d87ba; opacity: 0.8">
+          style="background-color: rgba(157, 135, 186, 0.7);">
           <div style={parent_style}>
             
           <h2  style="margin-top: 5px">
-          Irregular migrant experience violence at an alarmingly high rate
+          Irregular migrants experience violence at an alarmingly high rate
 
           </h2>  
           <p use:fit={{min_size: 3, max_size: 30}} style="margin-center: 100px;">According to the survey, about <strong>1 in 4 of the irregular migrants surveyed suffered some form of violence during their journey.</strong><br> 
@@ -98,7 +98,7 @@
 
       {#if progress >=0.11 && progress<0.27}
         <div class="container text-sizing transition-class" 
-          style="background-color: #eadc41; opacity: 0.9;"> 
+          style="background-color: rgba(234, 220, 65, 0.8);"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
               Gender vulnerablity
@@ -117,7 +117,7 @@
 
       {#if progress >=0.27 && progress <0.50}
         <div class="container text-sizing transition-class" 
-        style="background-color: #20a8b0; opacity: 0.8;"> 
+        style="background-color: rgba(32, 168, 176, 0.7);"> 
           <div style={parent_style}>
             <h2 style="margin-top: 5px">
               Migration motives
@@ -136,7 +136,7 @@
 
     {#if progress >=0.50 && progress < 0.67}
       <div class="container text-sizing"
-        style="background-color: #e56147; opacity:0.8;">
+        style="background-color: rgba(229, 97, 71, 0.7)">
         <div style={parent_style}>
           <h2 style="margin-top: 5px">
             Migration companion 
