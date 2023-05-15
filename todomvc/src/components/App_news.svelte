@@ -50,7 +50,7 @@
                 understand the factors in migration.
         </p>
         <h4 style="margin-top: 30px; padding-left: 40px; padding-right: 40px;">It is key to remember that this survey was conducted on migrants after their journey which means that 
-                the data we are seeing is likely subject to <em>Survival Bias</em> <sup><a href="https://en.wikipedia.org/wiki/Survivorship_bias" target="_blank">1</a></sup>.
+                the data we are seeing is likely subject to <a href="https://en.wikipedia.org/wiki/Survivorship_bias"><em>Survival Bias.</em> </a>
       </h4>
 
         <!-- <div style = "height:500px"></div> -->
@@ -107,7 +107,7 @@
             </h2>
 
             <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px;"> According to the survey, women (20%) were less likely to suffer from violence than men (27%).
-              However, <strong>this statistic does not align with other studies, which report that 60% of women experience rape and sexual assault during migration</strong> <sup><a href="https://digital.law.washington.edu/dspace-law/bitstream/handle/1773.1/1282/22PRLPJ713.pdf?sequence=1&isAllowed=y" target="_blank">2</a></sup> 
+              However, <strong>this statistic does not align with other studies, which report that 60% of women experience rape and sexual assault during migration</strong> <sup><a href="https://unu.edu/publications/articles/fleeing-to-mexico-for-safety-the-perilous-journey-for-migrant-women.html" target="_blank">2</a></sup>.
               The discrepancy may be due to the survey data being collected from the migrant's family members. The victims have reported feeling shame and trauma about the experience and may not want to share it with their family members back home.
             </p>
           </div> 
@@ -125,9 +125,9 @@
 
             <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px"><strong>Natural hazards are increasingly becoming a motive for migration from central America.</strong><br>  
               In the Fall of 2020, two hurricanes (Eta and Iota) hit impoverished areas of Honduras in rapid succession, striking more than four million people across the nation — nearly half the population — and leveling entire neighborhoods. 
-              This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy. <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525" target="_blank">3</a></sup>
+              This was right after a ruinous 5 year drought that drove many rural communities to bankruptcy. <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525" target="_blank">4</a></sup>
                Many decided to migrate at that exact moment. 
-               <strong>The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">4</a></sup>.
+               <strong>The abruptness meant many were underprepared and travelled with their children which slowed them down and made them easier targets for malicious actors</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
             </p>
           </div> 
         </div>
@@ -143,7 +143,7 @@
 
           <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Attempting to travel alone has many perils. It is easy to be targeted by cartels and human smugglers who are looking for desperate lost people.
              This is why most people opt to either pay a coyote who know the lay of the land or join a migrant caravan
-             <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">4</a></sup>.
+             <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
           </p>
         </div> 
       </div>
@@ -162,7 +162,7 @@
         <p use:fit={{min_size: 3, max_size: 40}} style="margin-top: 5px"> 
           <strong>Migrant caravans have become more popular in recent years because they are perceived as a cheaper and safer option of travel, especially for women and children.</strong><br>
           The idea is that by traveling in groups with the same objective, the solidarity among the migrants would protect them. The reality was far from this. 
-          <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who are particularly vulnerable during the journey.</strong><sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
+          <strong>Many of the people who joined the caravans were people who would not have migrated through other traditional means such as women with children who are particularly vulnerable during the journey</strong> <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
       </p>
       
         
@@ -179,9 +179,12 @@
       <div class="container text-sizing"
          style="background-color: #d34188;">
         <div style={parent_style}>  
-          <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted.<br> Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds.
-          <br>
-           <a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">Source</a>
+          <p use:fit={{min_size: 3, max_size: 40}}  style="margin-top: 5px">
+            Those who stop to take breaks and are left behind are targeted and picked off by human traffickers who follow the caravan for opportunities to kidnap the exhausted.
+            <br> 
+            Sexual assault is pervasive inside the caravans themselves, where there is little police oversight and it is easy for the assaulters to blend back into the crowds
+        
+            <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>.
           </p>
         </div> 
       </div>
@@ -223,7 +226,8 @@
     <div style = "height:10px"></div>
     <div class='quote' style="background-color: rgba(234, 220, 32, 0.5);">
       <h3>
-        &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap. They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador, (February 2020)
+        &ldquo;Me and some other women with our children were offered a ride by two young men, but it was a trap.
+         They took us to the fields and pulled out a gun. Thank god we were able to fight back against them, but many other women are not as lucky” - Pilar, El Salvador (February 2020) <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
       </h3>  
     </div>
 
@@ -236,13 +240,13 @@
 
     <div class='quote' style="background-color: rgba(32, 168, 176, 0.5);">
       <h3>
-        &ldquo; We are doomed here. The desperation, the sadness, that's what makes you migrate." - Magdalena Flores (Honduras 2020)
+        &ldquo; We are doomed here. The desperation, the sadness, that's what makes you migrate." - Magdalena Flores (Honduras 2020) <sup><a href="https://www.nytimes.com/2021/04/06/world/americas/migration-honduras-central-america.html" target="_blank">3</a></sup>
      </h3>  
     </div>
 
     <div class='quote' style="background-color: rgba(32, 168, 176, 0.5);">
       <h3>
-        &ldquo; I never wanted to do this.” - Said Ana Hernández, clutching her 11-year-old's hand at a gas station - “The situation is forcing me to. You get to a point where you don't have anything to give them to eat.” (Honduras 2020)
+        &ldquo; I never wanted to do this.” - Said Ana Hernández, clutching her 11-year-old's hand at a gas station - “The situation is forcing me to. You get to a point where you don't have anything to give them to eat.” (Honduras 2020)<sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
      </h3>  
     </div>
 
@@ -261,7 +265,9 @@
     <div style = "height:10px"></div> 
     <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
       <h3>
-        &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things, from the idea of reaching the north to being well united.” - Andrea (September 2019)
+        &ldquo; I joined the caravan because they said everything would be fine, that we would pass through to the north without problems. 
+        They said that together in the caravan we would protect ourselves from the crime in Mexico, that we would share many things,
+         from the idea of reaching the north to being well united.” - Andrea (September 2019)<sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
       </h3>  
     </div>
 
@@ -269,7 +275,11 @@
     <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
 
       <h3>
-        &ldquo; It hasn't been easy to come in the caravan because everything is difficult. Contrary to what I thought, there aren't many facilities, and it takes a lot of effort to come in the caravan. You have to walk a lot, rest little, and even when you rest, you're always taking care of yourself. There's a lack of trust with those you come with because not everyone knows each other. There are many problems, and the journey in the caravan is not safe.” - Alicia (September 2019)
+        &ldquo; It hasn't been easy to come in the caravan because everything is difficult.
+         Contrary to what I thought, there aren't many facilities, and it takes a lot of effort to come in the caravan.
+          You have to walk a lot, rest little, and even when you rest, you're always taking care of yourself. 
+          There's a lack of trust with those you come with because not everyone knows each other. 
+          There are many problems, and the journey in the caravan is not safe.” - Alicia (September 2019)<sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
       </h3>  
     </div>
     
@@ -277,7 +287,9 @@
 
     <div class='quote' style="background-color: rgba(211, 65, 136, 0.5);">
       <h3>
-        &ldquo; In the end, there were so many of us, it was scary. When my wife went to the bathroom, someone touched her inappropriately, but she didn't tell me out of fear until the next day. There was nothing I could do.” - Rodrigo (2020)
+        &ldquo; In the end, there were so many of us, it was scary.
+         When my wife went to the bathroom, someone touched her inappropriately, but she didn't tell me out of fear until the next day. 
+         There was nothing I could do.” - Rodrigo (2020) <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853" target="_blank">1</a></sup>
 
       </h3>  
     </div>
@@ -291,35 +303,79 @@
 </Scroller>
 </div>
 </main>
-<main>
-    <div class = 'bookend' >
-      <h4 style="margin-top: 0px; color: #dddada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
-        
-      
-      <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
-        <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
-          We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
-          Trump administration during the COVID pandemic and has been used to expel migrants from the United States without due process, is set to expire.
-        </h3>
-        
-        <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
-          We also hope to provide a resource for journalists and researchers who are interested in this topic
-        </h3>
-        <h4 style="margin-top: 50px;">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
-          Overall, we believe that we have unconvered significant weaknesses and biases hidden in the data, particularly when it comes to violence as it relates to gender differences where the data
-          and the reporting diverge significantly. We highlight this issue because we believe that it is very important to not always relay on data to tell the whole story.
-        </h4> 
-        <h3 style="margin-top: 50px">
-          If you have been moved by these data points and stories,  
-           <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
-        </h3>
-        
 
+<body style="background-color: #dcdada;">
+  <main>
+      <div class='bookend' style="background-color: #dcdada; padding: 20px;">
+        <h4 style="margin-top: 0px; color: #dddada;">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+  
+        <h4 style="margin-top: 0px">In this website, we highlight the insights related to external migration mobility collected by the joint initiative between WFP and the International Organization for Migration (IOM).</h4>
+          <h3 style="margin-top: 50px">Our main goal is to shed light on the most vulnerable forms of travel in a way that is understandable to the general public.
+            We believe that this topic is of particular relevance today as Title 42, which was put in place by the 
+            Trump administration during the COVID pandemic and has been used to expel migrants from the United States without due process, is set to expire<sup><a href="https://www.wola.org/2023/05/weekly-u-s-mexico-border-update-title-42-ends/" target="_blank">5</a></sup>. 
+          </h3>
+          
+          <h3 style="margin-top: 50px">Furthermore, we hope to offer this information to potential migrants considering the journey, so they can make more informed decisions.
+            We also hope to provide a resource for journalists and researchers who are interested in this topic
+          </h3>
+          <h4 style="margin-top: 50px;">Another objective is to showcase the strengths and weaknesses of the dataset by comparing it to other qualitative and quantitative work in this sector.
+            Overall, we believe that we have unconvered significant weaknesses and biases hidden in the data, particularly when it comes to violence as it relates to gender differences where the data
+            and the reporting diverge significantly. We highlight this issue because we believe that it is very important to not always relay on data to tell the whole story.
+          </h4> 
+          <h3 style="margin-top: 50px; margin-bottom: 50px; background-color: #dcdada;" >
+            If you have been moved by these data points and stories,  
+            <a href="https://www.house.gov/representatives/find-your-representative">we urge you to contact your representatives</a> and ask them to support policies that protect these migrants.
+          </h3>
         
-    </div>
-    
+        
+      </div>
+  </main>
 
-</main>
+  <!-- Add your Acknowledgement and Reference sections here -->
+  <section style="background-color: #dcdada; padding: 20px;margin-top: 200px;">
+      <h2>Acknowledgements</h2>
+      <div style = "height:10px"></div>
+      <h3 style="font-size: 24px;">
+        We would like to express our deepest appreciation to all those who provided us the possibility to complete this project. We would particularly give to thanks the World Food Program staff, who shared this important and sensitive data with us.
+      </h3>
+      <h3 style="font-size: 24px;">
+        Furthermore, we would also like to acknowledge with much appreciation the crucial role that the faculty and TA staff who supported us throughout the project and the semester.
+      </h3>
+  </section>
+
+  <section style="background-color: #dcdada; padding: 20px;margin-top: 30px;">
+      <h4 style="font-size: 35px;">References</h4>
+      <ol style="font-size: 24px;margin-top: 10px;">
+          <li>
+              <p style="margin-left: 100px; font-size: 24px;">
+                Simón Pedro Izcara Palacios & Karla Lorena Andrade Rubio. (2022). Migración y violencia: las caravanas  de migrantes centroamericanos. Universidad Autónoma de Tamaulipas, Victoria, México. <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853">1</a></sup>
+              </p>
+          </li>
+          <li>
+            <p style="margin-left: 100px; font-size: 24px;">
+              Fleeing to Mexico for Safety: The Perilous Journey for Migrant Women. United Nations University. <sup><a href="https://unu.edu/publications/articles/fleeing-to-mexico-for-safety-the-perilous-journey-for-migrant-women.html">2</a></sup>
+            </p>
+          </li>
+          <li>
+            <p style="margin-left: 100px; font-size: 24px;">
+              "We Are Doomed": Devastation From Storms Fuels Migration in Honduras (2021). NYTimes - By Natalie Kitroeff. <sup><a href="https://www.nytimes.com/2021/04/06/world/americas/migration-honduras-central-america.html">3</a></sup>
+            </p>
+          </li>
+          <li>
+            <p style="margin-left: 100px; font-size: 24px;">
+              "We're defeated": Climate migrants fleeing storm-stricken Central America struggle to find refuge (2021). NBC News - By Albinson Linares, Noticias Telemundo <sup><a href="https://www.nbcnews.com/news/latino/central-american-climate-migrants-face-countless-barriers-seeking-refu-rcna525">4</a></sup>
+            </p>
+          </li>
+          <li>
+            <p style="margin-left: 100px; font-size: 24px;">
+              Weekly U.S.-Mexico Border Update: Title 42 Ends (May 2023). Advocacy for Human Rights in the Americas - By Adam Isacson <sup><a href="https://revistas.unal.edu.co/index.php/recs/article/view/95765/83853">1</a></sup>
+            </p>
+          </li>
+          <!-- Add more as required -->
+      </ol>
+  </section>
+</body>
+  
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
@@ -387,17 +443,7 @@
     background: rgba(170, 51, 120, 0.2) /*  40% opaque */;
     visibility: visible;
   }
-  section {
-    height: 80vh;
-    background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
-    /* color: white; */
-    outline: magenta solid 3px;
-    text-align: center;
-    max-width: 750px; /* adjust at will */
-    color: black;
-    padding: 1em;
-    margin: 0 0 2em 0;
-  }
+  
 
   .quote {
     margin: 30px;
